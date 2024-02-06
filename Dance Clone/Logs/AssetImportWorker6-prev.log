@@ -1,0 +1,744 @@
+Using pre-set license
+Built from '2022.3/release' branch; Version is '2022.3.18f1 (d29bea25151d) revision 13802474'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 10  (10.0.19045) 64bit CoreSingleLanguage' Language: 'en' Physical Memory: 8026 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2022.3.18f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker6
+-projectPath
+C:/Users/dubst/Desktop/Folders/Game Dev/Projects/Dance-Clone/Dance Clone
+-logFile
+Logs/AssetImportWorker6.log
+-srvPort
+52847
+Successfully changed project path to: C:/Users/dubst/Desktop/Folders/Game Dev/Projects/Dance-Clone/Dance Clone
+C:/Users/dubst/Desktop/Folders/Game Dev/Projects/Dance-Clone/Dance Clone
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-allocator-temp-initial-block-size-main=262144"
+    "memorysetup-allocator-temp-initial-block-size-worker=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Player connection [16632] Host "[IP] 169.254.179.105 [Port] 0 [Flags] 2 [Guid] 3670273976 [EditorId] 3670273976 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-B5L28F59) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+
+Player connection [16632] Host "[IP] 169.254.179.105 [Port] 0 [Flags] 2 [Guid] 3670273976 [EditorId] 3670273976 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-B5L28F59) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+
+[Physics::Module] Initialized MultithreadedJobDispatcher with 15 workers.
+Refreshing native plugins compatible for Editor in 3495.95 ms, found 12 plugins.
+Preloading 1 native plugins for Editor in 0.97 ms.
+Initialize engine version: 2022.3.18f1 (d29bea25151d)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2022.3.18f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/dubst/Desktop/Folders/Game Dev/Projects/Dance-Clone/Dance Clone/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce GTX 1660 Ti (ID=0x2191)
+    Vendor:   NVIDIA
+    VRAM:     5979 MB
+    Driver:   31.0.15.4617
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2022.3.18f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2022.3.18f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2022.3.18f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56728
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.18f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.110904 seconds.
+- Loaded All Assemblies, in  6.347 seconds
+Native extension for WindowsStandalone target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.297 seconds
+Domain Reload Profiling: 6641ms
+	BeginReloadAssembly (4786ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (0ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (3ms)
+	RebuildCommonClasses (390ms)
+	RebuildNativeTypeToScriptingClass (11ms)
+	initialDomainReloadingComplete (177ms)
+	LoadAllAssembliesAndSetupDomain (981ms)
+		LoadAssemblies (4776ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (978ms)
+			TypeCache.Refresh (975ms)
+				TypeCache.ScanAssembly (718ms)
+			ScanForSourceGeneratedMonoScriptInfo (1ms)
+			ResolveRequiredComponents (1ms)
+	FinalizeReload (297ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (239ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (10ms)
+			SetLoadedEditorAssemblies (8ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (4ms)
+			ProcessInitializeOnLoadAttributes (162ms)
+			ProcessInitializeOnLoadMethodAttributes (54ms)
+			AfterProcessingInitializeOnLoad (0ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (0ms)
+========================================================================
+Worker process is ready to serve import requests
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  9.912 seconds
+Refreshing native plugins compatible for Editor in 28.21 ms, found 12 plugins.
+Native extension for WindowsStandalone target not found
+Package Manager log level set to [2]
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.NullReferenceException: Object reference not set to an instance of an object
+  at Unity.XR.Oculus.OculusLoader.AssetPathToAbsolutePath (System.String assetPath) [0x0003d] in .\Library\PackageCache\com.unity.xr.oculus@4.1.2\Runtime\OculusLoader.cs:287 
+  at Unity.XR.Oculus.OculusLoader.EditorLoadOVRPlugin () [0x00084] in .\Library\PackageCache\com.unity.xr.oculus@4.1.2\Runtime\OculusLoader.cs:272 
+  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)
+  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x0006a] in <bfbc89a04b6b4dd49c3614d03fc31ce8>:0 
+   --- End of inner exception stack trace ---
+  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00083] in <bfbc89a04b6b4dd49c3614d03fc31ce8>:0 
+  at System.Reflection.MethodBase.Invoke (System.Object obj, System.Object[] parameters) [0x00000] in <bfbc89a04b6b4dd49c3614d03fc31ce8>:0 
+  at UnityEditor.EditorAssemblies.ProcessInitializeOnLoadMethodAttributes () [0x000a5] in <8e887700cd7e4674989da7b046e8eaa6>:0 
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadMethodAttributes ()
+
+Mono: successfully reloaded assembly
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+- Finished resetting the current domain, in  1.685 seconds
+Domain Reload Profiling: 11598ms
+	BeginReloadAssembly (260ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (6ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (31ms)
+	RebuildCommonClasses (42ms)
+	RebuildNativeTypeToScriptingClass (13ms)
+	initialDomainReloadingComplete (63ms)
+	LoadAllAssembliesAndSetupDomain (9530ms)
+		LoadAssemblies (9182ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (515ms)
+			TypeCache.Refresh (444ms)
+				TypeCache.ScanAssembly (343ms)
+			ScanForSourceGeneratedMonoScriptInfo (43ms)
+			ResolveRequiredComponents (26ms)
+	FinalizeReload (1688ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (1426ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (14ms)
+			SetLoadedEditorAssemblies (6ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (276ms)
+			ProcessInitializeOnLoadAttributes (966ms)
+			ProcessInitializeOnLoadMethodAttributes (148ms)
+			AfterProcessingInitializeOnLoad (14ms)
+			EditorAssembliesLoaded (1ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (10ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.09 seconds
+Refreshing native plugins compatible for Editor in 53.34 ms, found 12 plugins.
+Preloading 1 native plugins for Editor in 0.14 ms.
+Unloading 6484 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 130 unused Assets / (2.5 MB). Loaded Objects now: 6918.
+Memory consumption went from 243.9 MB to 241.4 MB.
+Total: 22.773800 ms (FindLiveObjects: 7.445800 ms CreateObjectMapping: 0.960300 ms MarkObjects: 7.782100 ms  DeleteObjects: 6.581900 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:scripting/monoscript/fileName/I_IntGameEventInspector.cs: 139b477dea9209126de6f6723a787cce -> 
+  custom:scripting/monoscript/fileName/PlayerPockets.cs: d450b242839051529fa9d0970ffadda3 -> 
+  custom:scripting/monoscript/fileName/EnviromentController.cs: 3d699ec63e7672fdee174b3329424c29 -> 
+  custom:scripting/monoscript/fileName/SurfaceDetails.cs: b2354efa877063f4bf54cc839e0b8e5e -> 
+  custom:scripting/monoscript/fileName/OnJointBreakListener.cs: 096ee6d8597ad5224b36a8111e2ca023 -> 
+  custom:scripting/monoscript/fileName/TubeRenderer.cs: 651d7637d6c79ad22a15fd31be739ced -> 
+  custom:scripting/monoscript/fileName/VR_Saber.cs: 5171d9a471b9d2c61560b1b7cda0578a -> 
+  custom:scripting/monoscript/fileName/VR_DistanceGrab.cs: bc1f85b1a9af852777734333117e479c -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:scripting/monoscript/fileName/VR_BeatEnvironmentEmissionMarker.cs: 3758e060b91277e37444b32c6dc916f4 -> 
+  custom:scripting/monoscript/fileName/I_HandVisualizerTool.cs: 412574538b091a32323c5902bfb91f91 -> 
+  custom:scripting/monoscript/fileName/VR_BeatSpawnMarker.cs: 76fe0eba6657bf7182ca74fcb72798ee -> 
+  custom:scripting/monoscript/fileName/SetNoEmmisiveColor.cs: a96ca899a42dfa1c9654a5ad2bc428d2 -> 
+  custom:scripting/monoscript/fileName/VR_BeatCube.cs: a14f0d1719f026714a0de64d0a3f0149 -> 
+  custom:scripting/monoscript/fileName/AudioManager.cs: 4d3d94083635e0af0f41719365dcba3e -> 
+  custom:scripting/monoscript/fileName/PlatinioEditorGUILayout.cs: b9e713046363a2c972a1a5aec646d24c -> 
+  custom:scripting/monoscript/fileName/VR_Hand.cs: 76c8e952b2b39e3b37926fe81b893437 -> 
+  custom:scripting/monoscript/fileName/NavMeshExtension.cs: 3759e82cdf4086f810975498b9d6de7a -> 
+  custom:scripting/monoscript/fileName/RagdollHelper.cs: 1c8b8e945fd68d4bff775312b49b7919 -> 
+  custom:scripting/monoscript/fileName/Spawneable.cs: 4897e05c8f875f502ac8ec7450ad2c01 -> 
+  custom:scripting/monoscript/fileName/VolumeSingleton.cs: 98131abd9a6c703bf8d0d1f3f6f1e635 -> 
+  custom:scripting/monoscript/fileName/VR_Lever.cs: 49ed31d27e7a4ce1974df550220a94d3 -> 
+  custom:scripting/monoscript/fileName/SaberSelectionPanel.cs: a1f068064b71ca208cc15f0ba6a496d7 -> 
+  custom:scripting/monoscript/fileName/LoadSceneButton.cs: 261b9b609395d1a58d86233d10bed21f -> 
+  custom:scripting/monoscript/fileName/VR_ControllerGesture.cs: 4b3789e8ac9b87232b1d2172a8934828 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:scripting/monoscript/fileName/DontDestroyOnLoad.cs: bfc260f22c14164d215913b746a755ca -> 
+  custom:scripting/monoscript/fileName/GameObjectExtension.cs: a8389d0d987ce72eda136dba5daab289 -> 
+  custom:scripting/monoscript/fileName/VR_ParabolicAimHandler.cs: b07cbb04d83cab778219147daf422e5e -> 
+  custom:scripting/monoscript/fileName/VR_ColorHiglight.cs: 62df9970f845ec7e69a2ade74eae85f5 -> 
+  custom:scripting/monoscript/fileName/Breakable.cs: 5b3cc45f921f17d5191227f6a1e5506c -> 
+  custom:scripting/monoscript/fileName/VR_TwoHandGrabbable.cs: 6f59a1df04d3c10f31517fc5410523c6 -> 
+  custom:scripting/monoscript/fileName/VR_AimRaycaster.cs: 09f53540343a0a2c69448ec91bf5c4ac -> 
+  custom:scripting/monoscript/fileName/VR_GrabCloner.cs: ca14016c9da4fa9e1f4f22c02ad52db6 -> 
+  custom:scripting/monoscript/fileName/GameEvent.cs: cdf75fa2926675b8572c6e8bc8f6d4f0 -> 
+  custom:scripting/monoscript/fileName/LimbController.cs: aba45e2cd6a9e2e675a8d13a82afd504 -> 
+  custom:scripting/monoscript/fileName/AnimatorHelper.cs: eee6a21f0297f97625794fa29350017d -> 
+  custom:scripting/monoscript/fileName/Plane.cs: a090c5057d34004fbd3b7de1b52bdd4a -> 69547098044c0683a5ff9d9b8674a0ba
+  custom:scripting/monoscript/fileName/VR_BeatMarker.cs: 91b8c0c1423ac02e38b1cb0228ef607e -> 
+  custom:scripting/monoscript/fileName/Spark.cs: 361cce9afcc8316f88cb6d05859c081b -> 
+  custom:scripting/monoscript/fileName/IExposeAddListener.cs: 90647cc400823b41df847a6cbfc29026 -> 
+  custom:scripting/monoscript/fileName/Explosion.cs: d3f65c90859a34a6ed584c950998d94c -> 
+  custom:scripting/monoscript/fileName/I_VR_LeverInspector.cs: c42aa060387b673de157ce5d8e0156de -> 
+  custom:scripting/monoscript/fileName/Cuttable.cs: b3902a7c6933530364f750321eed8dcc -> 
+  custom:scripting/monoscript/fileName/SpawnerManager.cs: 383300ea205d5e0c52f9ec9c94cd2d5d -> b9d7fd0bac41955ec1c6f80d33a98ae5
+  custom:scripting/monoscript/fileName/BeatCubeSliceAction.cs: 98a1519364ae2a053396ec0917af8e51 -> 
+  custom:scripting/monoscript/fileName/GlobalDefinitionsManager.cs: 7fd5ebc901dccfeb7069c166dbd5dc81 -> 
+  custom:scripting/monoscript/fileName/DemoScene.cs: cfe4e47c7fa4e5662ee14684c1fb8d33 -> 
+  custom:scripting/monoscript/fileName/DismemberManager.cs: 3c5b8e84e7278b2749b6d666ec33b1c0 -> 
+  custom:scripting/monoscript/fileName/VR_TagsManager.cs: b0bf1890a73a5af471b959f3f0763b83 -> 
+  custom:scripting/monoscript/fileName/Triangulator.cs: db30143cf36c843dd9c90a8afd5ca4b5 -> 
+  custom:scripting/monoscript/fileName/DamageableLimb.cs: cf34d3b1b09a45655623aeba73546e10 -> 
+  custom:scripting/monoscript/fileName/VR_UIHighlight.cs: 89a3a3a21a997f550d2622b3e4a334f7 -> 
+  custom:scripting/monoscript/fileName/ColorTween.cs: c2b44f30ae898d261e620964cb5a3910 -> 
+  custom:scripting/monoscript/fileName/Door.cs: b2218b382caf4f55345f64426dc44630 -> 
+  custom:scripting/monoscript/fileName/Singleton.cs: 8f6297df34271fdb1ce2d9607ec6261d -> 90647cc400823b41df847a6cbfc29026
+  custom:scripting/monoscript/fileName/OnGrabStateChangeEvent.cs: 0536aceabf11c6db049f56057694268c -> 
+  custom:scripting/monoscript/fileName/VR_Grabbable.cs: b3c0c2f3d56eddedd7388ba032347d11 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:scripting/monoscript/fileName/VR_SteamVRInput.cs: 622c91f5a1f8b9be526af11e2e7a577e -> 
+  custom:scripting/monoscript/fileName/I_VR_TagsManager.cs: 490d249dfa5d3a8e59820137409152ea -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:scripting/monoscript/fileName/VR_OculusIntegration.cs: 852af1a42871b845a445593eb9e1a52a -> 
+  custom:scripting/monoscript/fileName/VR_AutoDrop.cs: 819c07468c00d93ce72461e45683d25d -> 
+  custom:scripting/monoscript/fileName/GlobalSurfaceDetails.cs: a441f6308232095a2a5c0680b1d3df83 -> 
+  custom:scripting/monoscript/fileName/I_AnimatorHelperInspector.cs: 97da4dc801dd9340c9d728d36424aa11 -> 
+  custom:scripting/monoscript/fileName/BaseTween.cs: c0ae06485bc9632f2c21ac93266fbf24 -> 
+  custom:scripting/monoscript/fileName/WallCube.cs: 18dd539f1fcc54362cdc8d0beaf03d14 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:scripting/monoscript/fileName/BaseGameEventInspector.cs: 90647cc400823b41df847a6cbfc29026 -> 
+  custom:scripting/monoscript/fileName/VR_WeaponEditorPart.cs: 6a1f91773922a75e7a9f0daeeca1960e -> 
+  custom:scripting/monoscript/fileName/VR_BeatSignalReceiver.cs: 7bfd1cd30a1d6a1ccf2eadc065e53eb0 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:scripting/monoscript/fileName/VR_Integration.cs: a13fcae1524ad7b6736db7ee32da55af -> 
+  custom:scripting/monoscript/fileName/TracksDatabase.cs: 0c2f9e6a863ebcc9b7fd251bd2f3d22f -> 
+  custom:scripting/monoscript/fileName/I_FloatGameEventInspector.cs: 05da4b39b7e6a0becb79810936beccce -> 
+  custom:scripting/monoscript/fileName/Triangle.cs: f0ab664be1489c444617076dad792afb -> 
+  custom:scripting/monoscript/fileName/DoorAnimatorController.cs: 2ca5aa7ce3d737a56755c4af1a8f2ba6 -> 
+  custom:scripting/monoscript/fileName/VR_BeatSettings.cs: 202eeb102c4917ce8df6721e1e1543cd -> 
+  custom:scripting/monoscript/fileName/I_VR_DropZoneInspector.cs: b7679fafa956692bfa7804d9b9364f19 -> 
+  custom:scripting/monoscript/fileName/VR_InputDevice.cs: 6258983abf0348b68f173eb93b08c4c5 -> 
+  custom:scripting/monoscript/fileName/VR_Trowable.cs: a24a511dbf4d9f72cd3cf0a7b7b7ce31 -> 
+  custom:scripting/monoscript/fileName/VR_SaberContainer.cs: f6d7e583b3a5f3bdfb9e008b38915c77 -> 
+  custom:scripting/monoscript/fileName/Vector3Tween.cs: 9dfedc878e28708db55b9f3494ebc4eb -> 
+  custom:scripting/monoscript/fileName/FaceCamera.cs: 43e71a2e53813ae85b643dd5067f6674 -> 
+  custom:scripting/monoscript/fileName/VR_Tag.cs: ae861ff9df1513510fea1c4fec93b655 -> 
+  custom:scripting/monoscript/fileName/OnSliceAction.cs: df58e259978314db208d0dbdf2f3c74f -> 
+  custom:scripting/monoscript/fileName/DismemberPart.cs: c62b40dc17ba10819d4cc20d86afad65 -> 
+  custom:scripting/monoscript/fileName/PlayableDirectorEvents.cs: 9a41271e1ffd7c050f121bc95868e5c4 -> 
+  custom:scripting/monoscript/fileName/PlayableManager.cs: 48c20138e56456db386fc43483c35254 -> 
+  custom:scripting/monoscript/fileName/Scroller.cs: dcc5e9287dfd961286929d3b4c80336e -> 
+  custom:scripting/monoscript/fileName/DamageInfo.cs: 4cab90dd5f39c04a96b849df125eeb90 -> 
+  custom:scripting/monoscript/fileName/Intersector.cs: 3e4fce4d458d6f47b5fb2a0aa350791e -> 
+  custom:scripting/monoscript/fileName/VR_DropZone.cs: 02a88668a4296112f5072840a8a1b3d4 -> 
+  custom:scripting/monoscript/fileName/I_BeatMarkerInspector.cs: 8ed9ace8b82df3d8192046fc964a3f81 -> 
+  custom:scripting/monoscript/fileName/TrackSlot.cs: d0e8403c4a00df2b5195a7c18de49f17 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:scripting/monoscript/fileName/I_VR_SliderInspector.cs: 4a9f04d0ed8614e56f743783a0d8b5d7 -> 
+  custom:scripting/monoscript/fileName/FadeEmission.cs: 890be1aef963bb1d0235b8d44ffe733e -> 
+  custom:scripting/monoscript/fileName/I_VR_InteractableInspector.cs: 0825a36dcc50d25ed81ed8d3033351ac -> 
+  custom:scripting/monoscript/fileName/VR_OculusInput.cs: ebca2bc4b613eb47d8b338940238d16c -> 
+  custom:scripting/monoscript/fileName/TriggerScritableEventOnAwake.cs: f08982667a7b1d5bec739bf7649fa5e3 -> 
+  custom:scripting/monoscript/fileName/FollowHeight.cs: 9bd8c1589d8edf53df2990e4bc9b6db9 -> 
+  custom:scripting/monoscript/fileName/TriggerRestartLevelButton.cs: 8ff14e9b452d8fdb019ed2c856b06fea -> 
+  custom:scripting/monoscript/fileName/VR_HandAnimationSettings.cs: b1527f5320f93fc86cdcb560b54b4a97 -> 
+  custom:scripting/monoscript/fileName/RectTransformHelper.cs: 7facb89e08865619174876161c9f2006 -> 
+  custom:scripting/monoscript/fileName/CollisionPredictor.cs: df11bbcbcc3ada3e8b840b50f80df245 -> 
+  custom:scripting/monoscript/fileName/Slicer.cs: 6d047fcf75ea758237c4a1e2c8ad9f5f -> 
+  custom:scripting/monoscript/fileName/Line.cs: 9330018c963a23b7a171b39bca145b61 -> 
+  custom:scripting/monoscript/fileName/OverrideRigidBodyCOM.cs: 538452a8a31cf119ff5d8a58f94de584 -> 
+  custom:scripting/monoscript/fileName/BlockDrop.cs: 33dd04b00ccd91d3bdcad049efc53c9e -> 
+  custom:scripting/monoscript/fileName/PreserveRotation.cs: f2ab4aafa9f7943d8e24972872af9e70 -> 
+  custom:scripting/monoscript/fileName/SpawnEventInfo.cs: ff9c75ff9c35a11ed80c950db17e12d0 -> 
+  custom:scripting/monoscript/fileName/VR_Interactable.cs: 424d7a3d54fb45658aa3804942ffd868 -> 
+  custom:scripting/monoscript/fileName/VR_CharacterController.cs: d2442f732d986ec8fe027aaaaa46ef4d -> 
+  custom:scripting/monoscript/fileName/HandVisualizerTool.cs: 69f093796fa2a53cdd4ef10484a9ea8c -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:scripting/monoscript/fileName/Wall.cs: 74488eec1cc5e9fcde14d0d5a54a291a -> 
+  custom:scripting/monoscript/fileName/ScoreManager.cs: 83416bc5b0b67869858bc95d1faa4dd1 -> 
+  custom:scripting/monoscript/fileName/VR_XRInput.cs: 4f798053e1e9bbd3602306b9350add06 -> 
+  custom:scripting/monoscript/fileName/Rotator.cs: 65fdb917910fbb23f85bd2a827390acd -> 1d2321ff2f7fb14b3359a89ff68efa12
+  custom:scripting/monoscript/fileName/EditorTools.cs: df95f147ffd2baa85fd442a33e64c518 -> 
+  custom:scripting/precompiled-assembly-types:Assembly-CSharp: cea80f32231bd6d8777ec73e00f826c4 -> 05e1bca123ca329dd3a89314378a835e
+  custom:scripting/monoscript/fileName/VectorEventListener.cs: 27d81b44485358ddbe7b44d6f559ca18 -> 
+  custom:scripting/monoscript/fileName/OnDismemberEvent.cs: 103caf1adb5e866a542b0199da50fcbf -> 
+  custom:scripting/monoscript/fileName/Buffer.cs: 90647cc400823b41df847a6cbfc29026 -> 
+  custom:scripting/monoscript/fileName/FaceWorldDirection.cs: f5981edbc4591b870be99c8d1755c6ba -> 
+  custom:scripting/monoscript/fileName/VR_XRIntegration.cs: d2cacfaac2b1d79d06730a4b83d1d6ec -> 
+  custom:scripting/monoscript/fileName/VR_Highlight.cs: 9f8914b5a8bc965517e8797813e1d339 -> 
+  custom:scripting/monoscript/fileName/CollisionInfo.cs: c57c9f2b38e9a11d4a8c0e8b84e11332 -> 
+  custom:scripting/monoscript/fileName/Vector2Tween.cs: 936af1c61236dc57b1835ce980c6326c -> 
+  custom:scripting/monoscript/fileName/VR_BeatCubeSpawneable.cs: 1d1247cfa3fa9fe226eac1312a445e48 -> 
+  custom:scripting/monoscript/fileName/Mine.cs: 271b78f4bf9e9de04fcc6e0fac2b5d3d -> 
+  custom:scripting/monoscript/fileName/VR_GrabbableZone.cs: e2397b48bd3e099ef86b72ee511b0c64 -> 
+  custom:scripting/monoscript/fileName/OnValueChangeEvent.cs: e465c65dd2c65188ed521382fe251f93 -> 
+  custom:scripting/monoscript/fileName/SlicedHull.cs: c2fde5eaadd8e5bf25c0218dffb750a6 -> 
+  custom:scripting/monoscript/fileName/DamageablePart.cs: 3febd1de5c66cd41f72ea40d00653011 -> 
+  custom:scripting/monoscript/fileName/HandPreviewManager.cs: 6bff50c94c3e26a109ce5ecce398b750 -> 
+  custom:scripting/monoscript/fileName/I_VR_ClimbPointInspector.cs: 4f993d4ab85a74ff4ddb247a47ebed8c -> 
+  custom:scripting/monoscript/fileName/Popup.cs: 9285a5a8f13a0cb89534f057e023f785 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:scripting/monoscript/fileName/VR_GrabbableEditorPart.cs: 650d7493b759e196f6f280cb5daaae6e -> 
+  custom:scripting/monoscript/fileName/HandPhysics.cs: 139c57278cdf04ff3d67ac9ee6d8869f -> 
+  custom:scripting/monoscript/fileName/DelayedEventListener.cs: 172b6706570ef70aa57af66c2b0580b1 -> 
+  custom:scripting/monoscript/fileName/VR_CharacterAimRaycaster.cs: d9c27e3c95ba511c8b5e174eeb968ad2 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:scripting/monoscript/fileName/DamageSaber.cs: 665eb44d502a7bdd4403ce3890268e80 -> 
+  custom:scripting/monoscript/fileName/BaseEventListener.cs: 90647cc400823b41df847a6cbfc29026 -> 
+  custom:scripting/monoscript/fileName/GameObjectMarker.cs: 4986459dab4ee41985730f46e55061b5 -> 
+  custom:scripting/monoscript/fileName/ClimbingTarget.cs: c37b1f15e74334fcd6bc900bc076c1af -> 
+  custom:scripting/monoscript/fileName/DamageableManager.cs: 95fe5b3aadcd71f1949b154a6e249410 -> 
+  custom:scripting/monoscript/fileName/VR_Slider.cs: 9aff858f393c0b48fb8161582edf8bdd -> 
+  custom:scripting/monoscript/fileName/OnInteractEvent.cs: 8796a01e9809f4de8e041271dbebac59 -> 
+  custom:scripting/monoscript/fileName/BeatDamageInfo.cs: 51c337cc715ec7eff36697d5e4367cec -> 
+  custom:scripting/monoscript/fileName/Damageable.cs: 25cb964f695781d0ab1a7bd1e81b85a7 -> 
+  custom:scripting/monoscript/fileName/VR_TeleportAimRaycaster.cs: e6a2c83a9b1d37c7ef6153d4d3904381 -> 
+  custom:CustomObjectIndexerAttribute: 0f5f72dab822025b0759b197a3119d15 -> 
+  custom:scripting/monoscript/fileName/ISpeed.cs: 973af29b3d72406e539bab326ed49fc4 -> 
+  custom:scripting/monoscript/fileName/IntersectionResult.cs: 48f33dc93cad86b27ecdd67106cef5c8 -> 
+  custom:scripting/monoscript/fileName/IntEventListener.cs: 671921163a8e799df11d99934250a72e -> 
+  custom:scripting/monoscript/fileName/VR_ScreenFader.cs: d8d41615247be618cf13c2907e14bf4c -> 
+  custom:scripting/monoscript/fileName/BaseGameEvent.cs: 90647cc400823b41df847a6cbfc29026 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:scripting/monoscript/fileName/VR_TeleportHandler.cs: 4fe9347340a982ee15cc72c565a859e0 -> 
+  custom:scripting/monoscript/fileName/OnDamageEvent.cs: 3ab58f1302ab8e395f8e743aacdec254 -> 
+  custom:scripting/monoscript/fileName/VR_TeleporManager.cs: bb8d12985e59cb307ff4adb6338a8da0 -> 
+  custom:scripting/monoscript/fileName/Vector2GameEvent.cs: 538d29d90683260f6d70bff3ae47c332 -> 
+  custom:scripting/monoscript/fileName/VR_SteamVRIntegration.cs: 1adb98a294977bcf4fcdc6357c421bf2 -> 
+  custom:scripting/monoscript/fileName/DestroyOnBecameInvisible.cs: 4e92d8abe69cd9c191985e7bfb88e3ad -> 
+  custom:scripting/monoscript/fileName/OnDropStateChangeEvent.cs: 27bc9eebea8e97b3d54c78451754148d -> 
+  custom:scripting/monoscript/fileName/VR_Manager.cs: 9049ec1a98407cfea83256cc10d537e5 -> 
+  custom:scripting/monoscript/fileName/PhysicsExtensions.cs: 4e9e8b6e5fa995228e3f795f995238b6 -> 
+  custom:scripting/monoscript/fileName/ParticleSystemMultiplier.cs: 8c5eeca5294173db54ffca6ac53ee34e -> 
+  custom:scripting/monoscript/fileName/VR_TagFilter.cs: 783ec601a9db8422cb18daf3c443eee3 -> 
+  custom:scripting/monoscript/fileName/VR_LineRenderer.cs: beca4b3fa45d20fca31db11e41e569d8 -> 
+  custom:scripting/monoscript/fileName/HistoryBuffer.cs: edeb6a723caa91a0e912833ce6e74678 -> 
+  custom:scripting/monoscript/fileName/ValueTween.cs: 5ef60f72c775bf96d4b8afd5a180ee3d -> 
+  custom:scripting/monoscript/fileName/VR_Haptics.cs: 4062d67caab465bc41c82f51b3329991 -> 
+  custom:scripting/monoscript/fileName/MathfExtension.cs: 03bf11a31042a66d0818cfd0e4fc0dc5 -> 
+  custom:scripting/monoscript/fileName/EventListener.cs: 22c5caf3f6551114d873728d426cefbb -> 
+  custom:scripting/monoscript/fileName/OnIntValueChangeEvent.cs: c5d2bd632db902b0e0f8e39d54fe93e6 -> 
+  custom:scripting/monoscript/fileName/I_VR_GrabbableZoneInspector.cs: bf4f219886183a8dcf43339f182b915b -> 
+  custom:scripting/monoscript/fileName/VR_Outline.cs: 6078f66a0c9bef7577a0256b764224ed -> 
+  custom:scripting/monoscript/fileName/TriggerCollisionListener.cs: a0ebedc97c68d84c4c0a3f27a061a734 -> 
+  custom:scripting/monoscript/fileName/VR_AimMarker.cs: 6baf16497622c76d7df23e641c21efa9 -> 
+  custom:scripting/monoscript/fileName/VR_InteractorController.cs: 20730cff87ce29ddab29a26c9b0303de -> 
+  custom:scripting/monoscript/fileName/BeatCubeDeadZone.cs: 76d8ebd10e7bf4147a80996320fea53b -> 
+  custom:scripting/monoscript/fileName/IgnoreColliderActivationFromGrabbable.cs: c0e3f6e68acaafe204bf7446489df61d -> 
+  custom:scripting/monoscript/fileName/VR_HandInteractSettings.cs: a79b7ca917733bfe5f6e38d73387289a -> 
+  custom:scripting/monoscript/fileName/VR_MeleeWeapon.cs: d2f478fadf34a4af2a1c2b54e45fc4c3 -> 
+  custom:scripting/monoscript/fileName/DropZoneOffset.cs: ccb7e89d317d07e3444f2c6c68deb4f5 -> 
+  custom:scripting/monoscript/fileName/WallCubePart.cs: 0d62fbd748a633ed9f10c856a5eff75f -> 
+  custom:scripting/monoscript/fileName/ChangeColliderEnableStateOnDrop.cs: 2af3a88ea3da0e26a38ddadd41247fe0 -> 
+  custom:scripting/monoscript/fileName/VR_TeleportAimHandler.cs: fb83640de5e67e6abc3fcb67ca5ad87c -> 
+  custom:scripting/monoscript/fileName/FinalScoreLabel.cs: 091cc2c54b6fe4275dcc3bc7cf2258b8 -> 
+  custom:scripting/monoscript/fileName/ClimbPoint.cs: 8fe729210b8b1989a625ee1464f1370e -> 
+  custom:scripting/monoscript/fileName/RandomizeRotation.cs: b7a77fb8ace0a146d523d916aae34d06 -> 
+  custom:scripting/monoscript/fileName/VR_BeatManager.cs: 5ba62cdf0f37804e2b5d8c13e8f5f3f0 -> 
+  custom:scripting/monoscript/fileName/VR_Player.cs: 7c10f7ddc41c86c6552a75ce62b5faf9 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:scripting/monoscript/fileName/IntGameEvent.cs: efaf0168e8e4bb90b436f8069e014e42 -> 
+  custom:scripting/monoscript/fileName/Carousel.cs: 84fa24ed651ca7e66114533b68ac253a -> 
+  custom:scripting/monoscript/fileName/TweenPool.cs: f7e7c400a8bd61db9ba4bfd23fa3ca94 -> 
+  custom:scripting/monoscript/fileName/TextureRegion.cs: 6a7db89582405ff60ed17137d454884d -> 
+  custom:scripting/monoscript/fileName/RotPartController.cs: c9b505e203a37be9024facd85228d369 -> 
+  custom:scripting/monoscript/fileName/ParentOnDrop.cs: e81d02b7fb3bdf17dcc467c194f556a1 -> 
+  custom:scripting/monoscript/fileName/MoveTween.cs: 01fafc977c05c32fd79dfe8cf17980ec -> 
+  custom:scripting/monoscript/fileName/VR_BeatEnvironmentColorMarker.cs: 21ff0efa630776fc70cade02ee4c89a2 -> 
+  custom:scripting/monoscript/fileName/IExposeInvoke.cs: 90647cc400823b41df847a6cbfc29026 -> 
+  custom:scripting/monoscript/fileName/I_VR_DistanceGrabInspector.cs: 7c6bce78ed49abd0315a9daff44fce47 -> 
+  custom:scripting/monoscript/fileName/FastCollisionListener.cs: 5addb1bf45922aa0aff8f737d9591e5c -> 
+  custom:scripting/monoscript/fileName/VR_OutlineHighlight.cs: 140f8f228e8109bff48acbcdbb2a1d02 -> 
+  custom:scripting/monoscript/fileName/DamageableManagerAI.cs: 17b003b931de487ed01c1851095ac624 -> 
+  custom:scripting/monoscript/fileName/XRInputHelper.cs: 8e18d38063a0f2bb2fca1fbd4e696a2c -> 
+  custom:scripting/monoscript/fileName/RotationLoop.cs: d239f411c6387acfe27475ee561cb5ee -> 
+  custom:scripting/monoscript/fileName/I_Vector2GameEventInspector.cs: f5a1ac1551f0cd87cceeb87c8dce3616 -> 
+  custom:scripting/monoscript/fileName/FloatEventListener.cs: 6582c82a1ee06f637a1630a9ce432df5 -> 
+  custom:scripting/monoscript/fileName/MaterialBindings.cs: 0acdb9ea495bceb89fd10344e5b1819f -> 
+  custom:scripting/monoscript/fileName/Player.cs: d917a5daa5cda4adce45948e48477621 -> 
+  custom:scripting/monoscript/fileName/TracksUIList.cs: 0017650d3526e7a24d6234338da299fe -> 
+  custom:scripting/monoscript/fileName/EnemySpawner.cs: 0b0b450d49b77b1ff591e819faa985be -> 
+  custom:scripting/monoscript/fileName/I_VR_ManagerInspector.cs: 79127032462a5706c1c4a70223c1e5f9 -> 
+  custom:scripting/monoscript/fileName/I_GameEventInspector.cs: e40b5c9d89cc60ae48064f6ef41199b7 -> 
+  custom:scripting/monoscript/fileName/SlicerExtensions.cs: aa08e3c74d6c89ca15384ad2c8872423 -> 
+  custom:scripting/monoscript/fileName/IExposeRemoveListener.cs: 90647cc400823b41df847a6cbfc29026 -> 
+  custom:scripting/monoscript/fileName/EasingFunctions.cs: 69e56db27ed64bbae6e715b966a15299 -> 
+  custom:scripting/monoscript/fileName/PlatinioTween.cs: 018f038b8451296b461d9caef8d60f9b -> 
+  custom:scripting/monoscript/fileName/DropZoneInfo.cs: 73d70714d432e151030bd5357638cc6a -> 
+  custom:scripting/monoscript/fileName/I_VR_GrabbableInspector.cs: 566a6e5760bfaba55751f999fe54b14b -> 
+  custom:scripting/monoscript/fileName/NoteMove.cs: dd1d01c814631431240c12e58a64be8a -> 00caed40737b7ae02517098535f99537
+  custom:scripting/monoscript/fileName/VR_HandSnapPoint.cs: 5a7e7ae2a96fab62b43a1a3663f9ab3a -> 
+  custom:scripting/monoscript/fileName/FloatGameEvent.cs: 8ac2fe0d981805c32f3204ed85ccbe91 -> 
+  custom:scripting/monoscript/fileName/VR_LineAimHandler.cs: 8d5b275826b4a7f17406a526c14316fc -> 
+  custom:scripting/monoscript/fileName/VR_Controller.cs: 273ca7b6aed00531a922caad963bee54 -> 
+  custom:scripting/monoscript/fileName/OnRotationGestureEvent.cs: 18fa8eda4dc77dbe864f926b9a0f9d58 -> 
+  custom:scripting/monoscript/fileName/VR_DropZoneUI.cs: 6d0086e33379463668d8af2bdf9b60b5 -> 
+  custom:scripting/monoscript/fileName/PlatinioTweenExtension.cs: 5f774d6d41a00a9c7d64183549f8aa8e -> 
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  1.747 seconds
+Refreshing native plugins compatible for Editor in 46.83 ms, found 12 plugins.
+Native extension for WindowsStandalone target not found
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.NullReferenceException: Object reference not set to an instance of an object
+  at Unity.XR.Oculus.OculusLoader.AssetPathToAbsolutePath (System.String assetPath) [0x0003d] in .\Library\PackageCache\com.unity.xr.oculus@4.1.2\Runtime\OculusLoader.cs:287 
+  at Unity.XR.Oculus.OculusLoader.EditorLoadOVRPlugin () [0x00084] in .\Library\PackageCache\com.unity.xr.oculus@4.1.2\Runtime\OculusLoader.cs:272 
+  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)
+  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x0006a] in <bfbc89a04b6b4dd49c3614d03fc31ce8>:0 
+   --- End of inner exception stack trace ---
+  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00083] in <bfbc89a04b6b4dd49c3614d03fc31ce8>:0 
+  at System.Reflection.MethodBase.Invoke (System.Object obj, System.Object[] parameters) [0x00000] in <bfbc89a04b6b4dd49c3614d03fc31ce8>:0 
+  at UnityEditor.EditorAssemblies.ProcessInitializeOnLoadMethodAttributes () [0x000a5] in <8e887700cd7e4674989da7b046e8eaa6>:0 
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadMethodAttributes ()
+
+Mono: successfully reloaded assembly
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+- Finished resetting the current domain, in  4.297 seconds
+Domain Reload Profiling: 6030ms
+	BeginReloadAssembly (355ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (5ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (86ms)
+	RebuildCommonClasses (54ms)
+	RebuildNativeTypeToScriptingClass (14ms)
+	initialDomainReloadingComplete (57ms)
+	LoadAllAssembliesAndSetupDomain (1251ms)
+		LoadAssemblies (1396ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (54ms)
+			TypeCache.Refresh (25ms)
+				TypeCache.ScanAssembly (0ms)
+			ScanForSourceGeneratedMonoScriptInfo (1ms)
+			ResolveRequiredComponents (24ms)
+	FinalizeReload (4299ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (1139ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (14ms)
+			SetLoadedEditorAssemblies (7ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (282ms)
+			ProcessInitializeOnLoadAttributes (678ms)
+			ProcessInitializeOnLoadMethodAttributes (142ms)
+			AfterProcessingInitializeOnLoad (14ms)
+			EditorAssembliesLoaded (1ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (10ms)
+Refreshing native plugins compatible for Editor in 31.99 ms, found 12 plugins.
+Preloading 1 native plugins for Editor in 1.81 ms.
+Unloading 6337 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 95 unused Assets / (2.5 MB). Loaded Objects now: 6922.
+Memory consumption went from 215.1 MB to 212.6 MB.
+Total: 12.367300 ms (FindLiveObjects: 1.369700 ms CreateObjectMapping: 1.034200 ms MarkObjects: 7.161600 ms  DeleteObjects: 2.781700 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:scripting/monoscript/fileName/I_IntGameEventInspector.cs: 139b477dea9209126de6f6723a787cce -> 
+  custom:scripting/monoscript/fileName/PlayerPockets.cs: d450b242839051529fa9d0970ffadda3 -> 
+  custom:scripting/monoscript/fileName/EnviromentController.cs: 3d699ec63e7672fdee174b3329424c29 -> 
+  custom:scripting/monoscript/fileName/SurfaceDetails.cs: b2354efa877063f4bf54cc839e0b8e5e -> 
+  custom:scripting/monoscript/fileName/OnJointBreakListener.cs: 096ee6d8597ad5224b36a8111e2ca023 -> 
+  custom:scripting/monoscript/fileName/TubeRenderer.cs: 651d7637d6c79ad22a15fd31be739ced -> 
+  custom:scripting/monoscript/fileName/VR_Saber.cs: 5171d9a471b9d2c61560b1b7cda0578a -> 
+  custom:scripting/monoscript/fileName/VR_DistanceGrab.cs: bc1f85b1a9af852777734333117e479c -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:scripting/monoscript/fileName/VR_BeatEnvironmentEmissionMarker.cs: 3758e060b91277e37444b32c6dc916f4 -> 
+  custom:scripting/monoscript/fileName/I_HandVisualizerTool.cs: 412574538b091a32323c5902bfb91f91 -> 
+  custom:scripting/monoscript/fileName/VR_BeatSpawnMarker.cs: 76fe0eba6657bf7182ca74fcb72798ee -> 
+  custom:scripting/monoscript/fileName/SetNoEmmisiveColor.cs: a96ca899a42dfa1c9654a5ad2bc428d2 -> 
+  custom:scripting/monoscript/fileName/VR_BeatCube.cs: a14f0d1719f026714a0de64d0a3f0149 -> 
+  custom:scripting/monoscript/fileName/AudioManager.cs: 4d3d94083635e0af0f41719365dcba3e -> 
+  custom:scripting/monoscript/fileName/PlatinioEditorGUILayout.cs: b9e713046363a2c972a1a5aec646d24c -> 
+  custom:scripting/monoscript/fileName/VR_Hand.cs: 76c8e952b2b39e3b37926fe81b893437 -> 
+  custom:scripting/monoscript/fileName/NavMeshExtension.cs: 3759e82cdf4086f810975498b9d6de7a -> 
+  custom:scripting/monoscript/fileName/RagdollHelper.cs: 1c8b8e945fd68d4bff775312b49b7919 -> 
+  custom:scripting/monoscript/fileName/Spawneable.cs: 4897e05c8f875f502ac8ec7450ad2c01 -> 
+  custom:scripting/monoscript/fileName/VolumeSingleton.cs: 98131abd9a6c703bf8d0d1f3f6f1e635 -> 
+  custom:scripting/monoscript/fileName/VR_Lever.cs: 49ed31d27e7a4ce1974df550220a94d3 -> 
+  custom:scripting/monoscript/fileName/SaberSelectionPanel.cs: a1f068064b71ca208cc15f0ba6a496d7 -> 
+  custom:scripting/monoscript/fileName/LoadSceneButton.cs: 261b9b609395d1a58d86233d10bed21f -> 
+  custom:scripting/monoscript/fileName/VR_ControllerGesture.cs: 4b3789e8ac9b87232b1d2172a8934828 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:scripting/monoscript/fileName/DontDestroyOnLoad.cs: bfc260f22c14164d215913b746a755ca -> 
+  custom:scripting/monoscript/fileName/GameObjectExtension.cs: a8389d0d987ce72eda136dba5daab289 -> 
+  custom:scripting/monoscript/fileName/VR_ParabolicAimHandler.cs: b07cbb04d83cab778219147daf422e5e -> 
+  custom:scripting/monoscript/fileName/VR_ColorHiglight.cs: 62df9970f845ec7e69a2ade74eae85f5 -> 
+  custom:scripting/monoscript/fileName/Breakable.cs: 5b3cc45f921f17d5191227f6a1e5506c -> 
+  custom:scripting/monoscript/fileName/VR_TwoHandGrabbable.cs: 6f59a1df04d3c10f31517fc5410523c6 -> 
+  custom:scripting/monoscript/fileName/VR_AimRaycaster.cs: 09f53540343a0a2c69448ec91bf5c4ac -> 
+  custom:scripting/monoscript/fileName/VR_GrabCloner.cs: ca14016c9da4fa9e1f4f22c02ad52db6 -> 
+  custom:scripting/monoscript/fileName/GameEvent.cs: cdf75fa2926675b8572c6e8bc8f6d4f0 -> 
+  custom:scripting/monoscript/fileName/LimbController.cs: aba45e2cd6a9e2e675a8d13a82afd504 -> 
+  custom:scripting/monoscript/fileName/AnimatorHelper.cs: eee6a21f0297f97625794fa29350017d -> 
+  custom:scripting/monoscript/fileName/Plane.cs: a090c5057d34004fbd3b7de1b52bdd4a -> 69547098044c0683a5ff9d9b8674a0ba
+  custom:scripting/monoscript/fileName/VR_BeatMarker.cs: 91b8c0c1423ac02e38b1cb0228ef607e -> 
+  custom:scripting/monoscript/fileName/Spark.cs: 361cce9afcc8316f88cb6d05859c081b -> 
+  custom:scripting/monoscript/fileName/IExposeAddListener.cs: 90647cc400823b41df847a6cbfc29026 -> 
+  custom:scripting/monoscript/fileName/Explosion.cs: d3f65c90859a34a6ed584c950998d94c -> 
+  custom:scripting/monoscript/fileName/I_VR_LeverInspector.cs: c42aa060387b673de157ce5d8e0156de -> 
+  custom:scripting/monoscript/fileName/Cuttable.cs: b3902a7c6933530364f750321eed8dcc -> 
+  custom:scripting/monoscript/fileName/SpawnerManager.cs: 383300ea205d5e0c52f9ec9c94cd2d5d -> b9d7fd0bac41955ec1c6f80d33a98ae5
+  custom:scripting/monoscript/fileName/BeatCubeSliceAction.cs: 98a1519364ae2a053396ec0917af8e51 -> 
+  custom:scripting/monoscript/fileName/GlobalDefinitionsManager.cs: 7fd5ebc901dccfeb7069c166dbd5dc81 -> 
+  custom:scripting/monoscript/fileName/DemoScene.cs: cfe4e47c7fa4e5662ee14684c1fb8d33 -> 
+  custom:scripting/monoscript/fileName/DismemberManager.cs: 3c5b8e84e7278b2749b6d666ec33b1c0 -> 
+  custom:scripting/monoscript/fileName/VR_TagsManager.cs: b0bf1890a73a5af471b959f3f0763b83 -> 
+  custom:scripting/monoscript/fileName/Triangulator.cs: db30143cf36c843dd9c90a8afd5ca4b5 -> 
+  custom:scripting/monoscript/fileName/DamageableLimb.cs: cf34d3b1b09a45655623aeba73546e10 -> 
+  custom:scripting/monoscript/fileName/VR_UIHighlight.cs: 89a3a3a21a997f550d2622b3e4a334f7 -> 
+  custom:scripting/monoscript/fileName/ColorTween.cs: c2b44f30ae898d261e620964cb5a3910 -> 
+  custom:scripting/monoscript/fileName/Door.cs: b2218b382caf4f55345f64426dc44630 -> 
+  custom:scripting/monoscript/fileName/Singleton.cs: 8f6297df34271fdb1ce2d9607ec6261d -> 90647cc400823b41df847a6cbfc29026
+  custom:scripting/monoscript/fileName/OnGrabStateChangeEvent.cs: 0536aceabf11c6db049f56057694268c -> 
+  custom:scripting/monoscript/fileName/VR_Grabbable.cs: b3c0c2f3d56eddedd7388ba032347d11 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:scripting/monoscript/fileName/VR_SteamVRInput.cs: 622c91f5a1f8b9be526af11e2e7a577e -> 
+  custom:scripting/monoscript/fileName/I_VR_TagsManager.cs: 490d249dfa5d3a8e59820137409152ea -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:scripting/monoscript/fileName/VR_OculusIntegration.cs: 852af1a42871b845a445593eb9e1a52a -> 
+  custom:scripting/monoscript/fileName/VR_AutoDrop.cs: 819c07468c00d93ce72461e45683d25d -> 
+  custom:scripting/monoscript/fileName/GlobalSurfaceDetails.cs: a441f6308232095a2a5c0680b1d3df83 -> 
+  custom:scripting/monoscript/fileName/I_AnimatorHelperInspector.cs: 97da4dc801dd9340c9d728d36424aa11 -> 
+  custom:scripting/monoscript/fileName/BaseTween.cs: c0ae06485bc9632f2c21ac93266fbf24 -> 
+  custom:scripting/monoscript/fileName/WallCube.cs: 18dd539f1fcc54362cdc8d0beaf03d14 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:scripting/monoscript/fileName/BaseGameEventInspector.cs: 90647cc400823b41df847a6cbfc29026 -> 
+  custom:scripting/monoscript/fileName/VR_WeaponEditorPart.cs: 6a1f91773922a75e7a9f0daeeca1960e -> 
+  custom:scripting/monoscript/fileName/VR_BeatSignalReceiver.cs: 7bfd1cd30a1d6a1ccf2eadc065e53eb0 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:scripting/monoscript/fileName/VR_Integration.cs: a13fcae1524ad7b6736db7ee32da55af -> 
+  custom:scripting/monoscript/fileName/TracksDatabase.cs: 0c2f9e6a863ebcc9b7fd251bd2f3d22f -> 
+  custom:scripting/monoscript/fileName/I_FloatGameEventInspector.cs: 05da4b39b7e6a0becb79810936beccce -> 
+  custom:scripting/monoscript/fileName/Triangle.cs: f0ab664be1489c444617076dad792afb -> 
+  custom:scripting/monoscript/fileName/DoorAnimatorController.cs: 2ca5aa7ce3d737a56755c4af1a8f2ba6 -> 
+  custom:scripting/monoscript/fileName/VR_BeatSettings.cs: 202eeb102c4917ce8df6721e1e1543cd -> 
+  custom:scripting/monoscript/fileName/I_VR_DropZoneInspector.cs: b7679fafa956692bfa7804d9b9364f19 -> 
+  custom:scripting/monoscript/fileName/VR_InputDevice.cs: 6258983abf0348b68f173eb93b08c4c5 -> 
+  custom:scripting/monoscript/fileName/VR_Trowable.cs: a24a511dbf4d9f72cd3cf0a7b7b7ce31 -> 
+  custom:scripting/monoscript/fileName/VR_SaberContainer.cs: f6d7e583b3a5f3bdfb9e008b38915c77 -> 
+  custom:scripting/monoscript/fileName/Vector3Tween.cs: 9dfedc878e28708db55b9f3494ebc4eb -> 
+  custom:scripting/monoscript/fileName/FaceCamera.cs: 43e71a2e53813ae85b643dd5067f6674 -> 
+  custom:scripting/monoscript/fileName/VR_Tag.cs: ae861ff9df1513510fea1c4fec93b655 -> 
+  custom:scripting/monoscript/fileName/OnSliceAction.cs: df58e259978314db208d0dbdf2f3c74f -> 
+  custom:scripting/monoscript/fileName/DismemberPart.cs: c62b40dc17ba10819d4cc20d86afad65 -> 
+  custom:scripting/monoscript/fileName/PlayableDirectorEvents.cs: 9a41271e1ffd7c050f121bc95868e5c4 -> 
+  custom:scripting/monoscript/fileName/PlayableManager.cs: 48c20138e56456db386fc43483c35254 -> 
+  custom:scripting/monoscript/fileName/Scroller.cs: dcc5e9287dfd961286929d3b4c80336e -> 
+  custom:scripting/monoscript/fileName/DamageInfo.cs: 4cab90dd5f39c04a96b849df125eeb90 -> 
+  custom:scripting/monoscript/fileName/Intersector.cs: 3e4fce4d458d6f47b5fb2a0aa350791e -> 
+  custom:scripting/monoscript/fileName/VR_DropZone.cs: 02a88668a4296112f5072840a8a1b3d4 -> 
+  custom:scripting/monoscript/fileName/I_BeatMarkerInspector.cs: 8ed9ace8b82df3d8192046fc964a3f81 -> 
+  custom:scripting/monoscript/fileName/TrackSlot.cs: d0e8403c4a00df2b5195a7c18de49f17 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:scripting/monoscript/fileName/I_VR_SliderInspector.cs: 4a9f04d0ed8614e56f743783a0d8b5d7 -> 
+  custom:scripting/monoscript/fileName/FadeEmission.cs: 890be1aef963bb1d0235b8d44ffe733e -> 
+  custom:scripting/monoscript/fileName/I_VR_InteractableInspector.cs: 0825a36dcc50d25ed81ed8d3033351ac -> 
+  custom:scripting/monoscript/fileName/VR_OculusInput.cs: ebca2bc4b613eb47d8b338940238d16c -> 
+  custom:scripting/monoscript/fileName/TriggerScritableEventOnAwake.cs: f08982667a7b1d5bec739bf7649fa5e3 -> 
+  custom:scripting/monoscript/fileName/FollowHeight.cs: 9bd8c1589d8edf53df2990e4bc9b6db9 -> 
+  custom:scripting/monoscript/fileName/TriggerRestartLevelButton.cs: 8ff14e9b452d8fdb019ed2c856b06fea -> 
+  custom:scripting/monoscript/fileName/VR_HandAnimationSettings.cs: b1527f5320f93fc86cdcb560b54b4a97 -> 
+  custom:scripting/monoscript/fileName/RectTransformHelper.cs: 7facb89e08865619174876161c9f2006 -> 
+  custom:scripting/monoscript/fileName/CollisionPredictor.cs: df11bbcbcc3ada3e8b840b50f80df245 -> 
+  custom:scripting/monoscript/fileName/Slicer.cs: 6d047fcf75ea758237c4a1e2c8ad9f5f -> 
+  custom:scripting/monoscript/fileName/Line.cs: 9330018c963a23b7a171b39bca145b61 -> 
+  custom:scripting/monoscript/fileName/OverrideRigidBodyCOM.cs: 538452a8a31cf119ff5d8a58f94de584 -> 
+  custom:scripting/monoscript/fileName/BlockDrop.cs: 33dd04b00ccd91d3bdcad049efc53c9e -> 
+  custom:scripting/monoscript/fileName/PreserveRotation.cs: f2ab4aafa9f7943d8e24972872af9e70 -> 
+  custom:scripting/monoscript/fileName/SpawnEventInfo.cs: ff9c75ff9c35a11ed80c950db17e12d0 -> 
+  custom:scripting/monoscript/fileName/VR_Interactable.cs: 424d7a3d54fb45658aa3804942ffd868 -> 
+  custom:scripting/monoscript/fileName/VR_CharacterController.cs: d2442f732d986ec8fe027aaaaa46ef4d -> 
+  custom:scripting/monoscript/fileName/HandVisualizerTool.cs: 69f093796fa2a53cdd4ef10484a9ea8c -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:scripting/monoscript/fileName/Wall.cs: 74488eec1cc5e9fcde14d0d5a54a291a -> 
+  custom:scripting/monoscript/fileName/ScoreManager.cs: 83416bc5b0b67869858bc95d1faa4dd1 -> 
+  custom:scripting/monoscript/fileName/VR_XRInput.cs: 4f798053e1e9bbd3602306b9350add06 -> 
+  custom:scripting/monoscript/fileName/Rotator.cs: 65fdb917910fbb23f85bd2a827390acd -> 1d2321ff2f7fb14b3359a89ff68efa12
+  custom:scripting/monoscript/fileName/EditorTools.cs: df95f147ffd2baa85fd442a33e64c518 -> 
+  custom:scripting/monoscript/fileName/VectorEventListener.cs: 27d81b44485358ddbe7b44d6f559ca18 -> 
+  custom:scripting/monoscript/fileName/OnDismemberEvent.cs: 103caf1adb5e866a542b0199da50fcbf -> 
+  custom:scripting/monoscript/fileName/Buffer.cs: 90647cc400823b41df847a6cbfc29026 -> 
+  custom:scripting/monoscript/fileName/FaceWorldDirection.cs: f5981edbc4591b870be99c8d1755c6ba -> 
+  custom:scripting/monoscript/fileName/VR_XRIntegration.cs: d2cacfaac2b1d79d06730a4b83d1d6ec -> 
+  custom:scripting/monoscript/fileName/VR_Highlight.cs: 9f8914b5a8bc965517e8797813e1d339 -> 
+  custom:scripting/monoscript/fileName/CollisionInfo.cs: c57c9f2b38e9a11d4a8c0e8b84e11332 -> 
+  custom:scripting/monoscript/fileName/Vector2Tween.cs: 936af1c61236dc57b1835ce980c6326c -> 
+  custom:scripting/monoscript/fileName/VR_BeatCubeSpawneable.cs: 1d1247cfa3fa9fe226eac1312a445e48 -> 
+  custom:scripting/monoscript/fileName/Mine.cs: 271b78f4bf9e9de04fcc6e0fac2b5d3d -> 
+  custom:scripting/monoscript/fileName/VR_GrabbableZone.cs: e2397b48bd3e099ef86b72ee511b0c64 -> 
+  custom:scripting/monoscript/fileName/OnValueChangeEvent.cs: e465c65dd2c65188ed521382fe251f93 -> 
+  custom:scripting/monoscript/fileName/SlicedHull.cs: c2fde5eaadd8e5bf25c0218dffb750a6 -> 
+  custom:scripting/monoscript/fileName/DamageablePart.cs: 3febd1de5c66cd41f72ea40d00653011 -> 
+  custom:scripting/monoscript/fileName/HandPreviewManager.cs: 6bff50c94c3e26a109ce5ecce398b750 -> 
+  custom:scripting/monoscript/fileName/I_VR_ClimbPointInspector.cs: 4f993d4ab85a74ff4ddb247a47ebed8c -> 
+  custom:scripting/monoscript/fileName/Popup.cs: 9285a5a8f13a0cb89534f057e023f785 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:scripting/monoscript/fileName/VR_GrabbableEditorPart.cs: 650d7493b759e196f6f280cb5daaae6e -> 
+  custom:scripting/monoscript/fileName/HandPhysics.cs: 139c57278cdf04ff3d67ac9ee6d8869f -> 
+  custom:scripting/monoscript/fileName/DelayedEventListener.cs: 172b6706570ef70aa57af66c2b0580b1 -> 
+  custom:scripting/monoscript/fileName/VR_CharacterAimRaycaster.cs: d9c27e3c95ba511c8b5e174eeb968ad2 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:scripting/monoscript/fileName/DamageSaber.cs: 665eb44d502a7bdd4403ce3890268e80 -> 
+  custom:scripting/monoscript/fileName/BaseEventListener.cs: 90647cc400823b41df847a6cbfc29026 -> 
+  custom:scripting/monoscript/fileName/GameObjectMarker.cs: 4986459dab4ee41985730f46e55061b5 -> 
+  custom:scripting/monoscript/fileName/ClimbingTarget.cs: c37b1f15e74334fcd6bc900bc076c1af -> 
+  custom:scripting/monoscript/fileName/DamageableManager.cs: 95fe5b3aadcd71f1949b154a6e249410 -> 
+  custom:scripting/monoscript/fileName/VR_Slider.cs: 9aff858f393c0b48fb8161582edf8bdd -> 
+  custom:scripting/monoscript/fileName/OnInteractEvent.cs: 8796a01e9809f4de8e041271dbebac59 -> 
+  custom:scripting/monoscript/fileName/BeatDamageInfo.cs: 51c337cc715ec7eff36697d5e4367cec -> 
+  custom:scripting/monoscript/fileName/Damageable.cs: 25cb964f695781d0ab1a7bd1e81b85a7 -> 
+  custom:scripting/monoscript/fileName/VR_TeleportAimRaycaster.cs: e6a2c83a9b1d37c7ef6153d4d3904381 -> 
+  custom:CustomObjectIndexerAttribute: 0f5f72dab822025b0759b197a3119d15 -> 
+  custom:scripting/monoscript/fileName/ISpeed.cs: 973af29b3d72406e539bab326ed49fc4 -> 
+  custom:scripting/monoscript/fileName/IntersectionResult.cs: 48f33dc93cad86b27ecdd67106cef5c8 -> 
+  custom:scripting/monoscript/fileName/IntEventListener.cs: 671921163a8e799df11d99934250a72e -> 
+  custom:scripting/monoscript/fileName/VR_ScreenFader.cs: d8d41615247be618cf13c2907e14bf4c -> 
+  custom:scripting/monoscript/fileName/BaseGameEvent.cs: 90647cc400823b41df847a6cbfc29026 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:scripting/monoscript/fileName/VR_TeleportHandler.cs: 4fe9347340a982ee15cc72c565a859e0 -> 
+  custom:scripting/monoscript/fileName/OnDamageEvent.cs: 3ab58f1302ab8e395f8e743aacdec254 -> 
+  custom:scripting/monoscript/fileName/VR_TeleporManager.cs: bb8d12985e59cb307ff4adb6338a8da0 -> 
+  custom:scripting/monoscript/fileName/Vector2GameEvent.cs: 538d29d90683260f6d70bff3ae47c332 -> 
+  custom:scripting/monoscript/fileName/VR_SteamVRIntegration.cs: 1adb98a294977bcf4fcdc6357c421bf2 -> 
+  custom:scripting/monoscript/fileName/DestroyOnBecameInvisible.cs: 4e92d8abe69cd9c191985e7bfb88e3ad -> 
+  custom:scripting/monoscript/fileName/OnDropStateChangeEvent.cs: 27bc9eebea8e97b3d54c78451754148d -> 
+  custom:scripting/monoscript/fileName/VR_Manager.cs: 9049ec1a98407cfea83256cc10d537e5 -> 
+  custom:scripting/monoscript/fileName/PhysicsExtensions.cs: 4e9e8b6e5fa995228e3f795f995238b6 -> 
+  custom:scripting/monoscript/fileName/ParticleSystemMultiplier.cs: 8c5eeca5294173db54ffca6ac53ee34e -> 
+  custom:scripting/monoscript/fileName/VR_TagFilter.cs: 783ec601a9db8422cb18daf3c443eee3 -> 
+  custom:scripting/monoscript/fileName/VR_LineRenderer.cs: beca4b3fa45d20fca31db11e41e569d8 -> 
+  custom:scripting/monoscript/fileName/HistoryBuffer.cs: edeb6a723caa91a0e912833ce6e74678 -> 
+  custom:scripting/monoscript/fileName/ValueTween.cs: 5ef60f72c775bf96d4b8afd5a180ee3d -> 
+  custom:scripting/monoscript/fileName/VR_Haptics.cs: 4062d67caab465bc41c82f51b3329991 -> 
+  custom:scripting/monoscript/fileName/MathfExtension.cs: 03bf11a31042a66d0818cfd0e4fc0dc5 -> 
+  custom:scripting/monoscript/fileName/EventListener.cs: 22c5caf3f6551114d873728d426cefbb -> 
+  custom:scripting/monoscript/fileName/OnIntValueChangeEvent.cs: c5d2bd632db902b0e0f8e39d54fe93e6 -> 
+  custom:scripting/monoscript/fileName/I_VR_GrabbableZoneInspector.cs: bf4f219886183a8dcf43339f182b915b -> 
+  custom:scripting/monoscript/fileName/VR_Outline.cs: 6078f66a0c9bef7577a0256b764224ed -> 
+  custom:scripting/monoscript/fileName/TriggerCollisionListener.cs: a0ebedc97c68d84c4c0a3f27a061a734 -> 
+  custom:scripting/monoscript/fileName/VR_AimMarker.cs: 6baf16497622c76d7df23e641c21efa9 -> 
+  custom:scripting/monoscript/fileName/VR_InteractorController.cs: 20730cff87ce29ddab29a26c9b0303de -> 
+  custom:scripting/monoscript/fileName/BeatCubeDeadZone.cs: 76d8ebd10e7bf4147a80996320fea53b -> 
+  custom:scripting/monoscript/fileName/IgnoreColliderActivationFromGrabbable.cs: c0e3f6e68acaafe204bf7446489df61d -> 
+  custom:scripting/monoscript/fileName/VR_HandInteractSettings.cs: a79b7ca917733bfe5f6e38d73387289a -> 
+  custom:scripting/monoscript/fileName/VR_MeleeWeapon.cs: d2f478fadf34a4af2a1c2b54e45fc4c3 -> 
+  custom:scripting/monoscript/fileName/DropZoneOffset.cs: ccb7e89d317d07e3444f2c6c68deb4f5 -> 
+  custom:scripting/monoscript/fileName/WallCubePart.cs: 0d62fbd748a633ed9f10c856a5eff75f -> 
+  custom:scripting/monoscript/fileName/ChangeColliderEnableStateOnDrop.cs: 2af3a88ea3da0e26a38ddadd41247fe0 -> 
+  custom:scripting/monoscript/fileName/VR_TeleportAimHandler.cs: fb83640de5e67e6abc3fcb67ca5ad87c -> 
+  custom:scripting/monoscript/fileName/FinalScoreLabel.cs: 091cc2c54b6fe4275dcc3bc7cf2258b8 -> 
+  custom:scripting/monoscript/fileName/ClimbPoint.cs: 8fe729210b8b1989a625ee1464f1370e -> 
+  custom:scripting/monoscript/fileName/RandomizeRotation.cs: b7a77fb8ace0a146d523d916aae34d06 -> 
+  custom:scripting/monoscript/fileName/VR_BeatManager.cs: 5ba62cdf0f37804e2b5d8c13e8f5f3f0 -> 
+  custom:scripting/monoscript/fileName/VR_Player.cs: 7c10f7ddc41c86c6552a75ce62b5faf9 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:scripting/monoscript/fileName/IntGameEvent.cs: efaf0168e8e4bb90b436f8069e014e42 -> 
+  custom:scripting/monoscript/fileName/Carousel.cs: 84fa24ed651ca7e66114533b68ac253a -> 
+  custom:scripting/monoscript/fileName/TweenPool.cs: f7e7c400a8bd61db9ba4bfd23fa3ca94 -> 
+  custom:scripting/monoscript/fileName/TextureRegion.cs: 6a7db89582405ff60ed17137d454884d -> 
+  custom:scripting/monoscript/fileName/RotPartController.cs: c9b505e203a37be9024facd85228d369 -> 
+  custom:scripting/monoscript/fileName/ParentOnDrop.cs: e81d02b7fb3bdf17dcc467c194f556a1 -> 
+  custom:scripting/monoscript/fileName/MoveTween.cs: 01fafc977c05c32fd79dfe8cf17980ec -> 
+  custom:scripting/monoscript/fileName/VR_BeatEnvironmentColorMarker.cs: 21ff0efa630776fc70cade02ee4c89a2 -> 
+  custom:scripting/monoscript/fileName/IExposeInvoke.cs: 90647cc400823b41df847a6cbfc29026 -> 
+  custom:scripting/monoscript/fileName/I_VR_DistanceGrabInspector.cs: 7c6bce78ed49abd0315a9daff44fce47 -> 
+  custom:scripting/monoscript/fileName/FastCollisionListener.cs: 5addb1bf45922aa0aff8f737d9591e5c -> 
+  custom:scripting/monoscript/fileName/VR_OutlineHighlight.cs: 140f8f228e8109bff48acbcdbb2a1d02 -> 
+  custom:scripting/monoscript/fileName/DamageableManagerAI.cs: 17b003b931de487ed01c1851095ac624 -> 
+  custom:scripting/monoscript/fileName/XRInputHelper.cs: 8e18d38063a0f2bb2fca1fbd4e696a2c -> 
+  custom:scripting/monoscript/fileName/RotationLoop.cs: d239f411c6387acfe27475ee561cb5ee -> 
+  custom:scripting/monoscript/fileName/I_Vector2GameEventInspector.cs: f5a1ac1551f0cd87cceeb87c8dce3616 -> 
+  custom:scripting/monoscript/fileName/FloatEventListener.cs: 6582c82a1ee06f637a1630a9ce432df5 -> 
+  custom:scripting/monoscript/fileName/MaterialBindings.cs: 0acdb9ea495bceb89fd10344e5b1819f -> 
+  custom:scripting/monoscript/fileName/Player.cs: d917a5daa5cda4adce45948e48477621 -> 
+  custom:scripting/monoscript/fileName/TracksUIList.cs: 0017650d3526e7a24d6234338da299fe -> 
+  custom:scripting/monoscript/fileName/EnemySpawner.cs: 0b0b450d49b77b1ff591e819faa985be -> 
+  custom:scripting/monoscript/fileName/I_VR_ManagerInspector.cs: 79127032462a5706c1c4a70223c1e5f9 -> 
+  custom:scripting/monoscript/fileName/I_GameEventInspector.cs: e40b5c9d89cc60ae48064f6ef41199b7 -> 
+  custom:scripting/monoscript/fileName/SlicerExtensions.cs: aa08e3c74d6c89ca15384ad2c8872423 -> 
+  custom:scripting/monoscript/fileName/IExposeRemoveListener.cs: 90647cc400823b41df847a6cbfc29026 -> 
+  custom:scripting/monoscript/fileName/EasingFunctions.cs: 69e56db27ed64bbae6e715b966a15299 -> 
+  custom:scripting/monoscript/fileName/PlatinioTween.cs: 018f038b8451296b461d9caef8d60f9b -> 
+  custom:scripting/monoscript/fileName/DropZoneInfo.cs: 73d70714d432e151030bd5357638cc6a -> 
+  custom:scripting/monoscript/fileName/I_VR_GrabbableInspector.cs: 566a6e5760bfaba55751f999fe54b14b -> 
+  custom:scripting/monoscript/fileName/NoteMove.cs: dd1d01c814631431240c12e58a64be8a -> 00caed40737b7ae02517098535f99537
+  custom:scripting/monoscript/fileName/VR_HandSnapPoint.cs: 5a7e7ae2a96fab62b43a1a3663f9ab3a -> 
+  custom:scripting/monoscript/fileName/FloatGameEvent.cs: 8ac2fe0d981805c32f3204ed85ccbe91 -> 
+  custom:scripting/monoscript/fileName/VR_LineAimHandler.cs: 8d5b275826b4a7f17406a526c14316fc -> 
+  custom:scripting/monoscript/fileName/VR_Controller.cs: 273ca7b6aed00531a922caad963bee54 -> 
+  custom:scripting/monoscript/fileName/OnRotationGestureEvent.cs: 18fa8eda4dc77dbe864f926b9a0f9d58 -> 
+  custom:scripting/monoscript/fileName/VR_DropZoneUI.cs: 6d0086e33379463668d8af2bdf9b60b5 -> 
+  custom:scripting/monoscript/fileName/PlatinioTweenExtension.cs: 5f774d6d41a00a9c7d64183549f8aa8e -> 
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+TcpMessagingSession - receive error: operation aborted. errorcode: 995, details: The I/O operation has been aborted because of either a thread exit or an application request.
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0

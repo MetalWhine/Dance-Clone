@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/VRBeatsKit/Scenes/BoxingStyle.unity
+- path: Assets/Scenes/(Click here) Custom Scenes/Test Track.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
