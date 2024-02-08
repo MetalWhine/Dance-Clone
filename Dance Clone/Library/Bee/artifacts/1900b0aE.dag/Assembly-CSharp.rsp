@@ -126,6 +126,7 @@
 -define:UNITY_POST_PROCESSING_STACK_V2
 -define:CSHARP_7_OR_LATER
 -define:CSHARP_7_3_OR_NEWER
+-r:"Assets/Melanchall/DryWetMIDI/Melanchall.DryWetMidi.dll"
 -r:"C:/Program Files/Unity/Hub/Editor/2022.3.18f1/Editor/Data/Managed/UnityEngine/UnityEditor.CoreModule.dll"
 -r:"C:/Program Files/Unity/Hub/Editor/2022.3.18f1/Editor/Data/Managed/UnityEngine/UnityEditor.DeviceSimulatorModule.dll"
 -r:"C:/Program Files/Unity/Hub/Editor/2022.3.18f1/Editor/Data/Managed/UnityEngine/UnityEditor.DiagnosticsModule.dll"
@@ -405,8 +406,11 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.XR.LegacyInputHelpers.ref.dll"
 -analyzer:"C:/Program Files/Unity/Hub/Editor/2022.3.18f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll"
 -analyzer:"C:/Program Files/Unity/Hub/Editor/2022.3.18f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
-"Assets/Scripts/NoteMove.cs"
-"Assets/Scripts/SpawnerManager.cs"
+"Assets/Melanchall/DryWetMIDI/Demo/DemoScript.cs"
+"Assets/Scripts/Lane.cs"
+"Assets/Scripts/Note.cs"
+"Assets/Scripts/ScoreManager.cs"
+"Assets/Scripts/SongManager.cs"
 "Assets/VRBeatsKit/Modules/VRDamageSystem/Damageable.cs"
 "Assets/VRBeatsKit/Modules/VRDamageSystem/DamageableLimb.cs"
 "Assets/VRBeatsKit/Modules/VRDamageSystem/DamageableManager.cs"
