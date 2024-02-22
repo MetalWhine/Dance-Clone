@@ -32,7 +32,7 @@ public class Note : MonoBehaviour
         else
         {
             // Lerps the position between spawn and despawn coordinates (Spawn == t = 0)
-            transform.position = Vector3.Lerp(Vector3.right * SongManager.Instance.noteSpawnX, Vector3.right * SongManager.Instance.noteDespawnX, t);
+            transform.localPosition = Vector3.Lerp(Vector3.forward * SongManager.Instance.noteSpawnX, Vector3.forward * SongManager.Instance.noteDespawnX, t);
         }
     }
 }

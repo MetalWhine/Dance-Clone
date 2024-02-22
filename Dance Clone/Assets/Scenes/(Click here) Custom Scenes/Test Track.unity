@@ -1142,7 +1142,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 16fba6d30ed741d4a9fdd6e79ee2f3ac, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -1362,7 +1362,7 @@ Transform:
   m_GameObject: {fileID: 732281013}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 10, y: -0.2, z: -1.5}
+  m_LocalPosition: {x: 10, y: 0, z: -1.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1381,7 +1381,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   noteRestriction: 5
-  input: 276
+  input: 0
   notePrefab: {fileID: 3329274389512234030, guid: 359a476f0d6b65d49a5af7e7c778262a,
     type: 3}
   timeStamps: []
@@ -1680,7 +1680,7 @@ Transform:
   m_GameObject: {fileID: 925831424}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 10, y: -0.2, z: 0.5}
+  m_LocalPosition: {x: 10, y: 0, z: 0.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1699,7 +1699,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   noteRestriction: 9
-  input: 274
+  input: 0
   notePrefab: {fileID: 3329274389512234030, guid: 3ea3058acbe710646a84a062445d50ae,
     type: 3}
   timeStamps: []
@@ -2543,7 +2543,7 @@ Transform:
   m_GameObject: {fileID: 1474829395}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 6.75, y: -0.2, z: 0}
+  m_LocalPosition: {x: 6.65, y: -0.2, z: 0}
   m_LocalScale: {x: 4, y: 0.1, z: 0.10000001}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2856,7 +2856,7 @@ Transform:
   m_GameObject: {fileID: 1903821918}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 10, y: -0.2, z: -0.5}
+  m_LocalPosition: {x: 10, y: 0, z: -0.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2875,7 +2875,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   noteRestriction: 7
-  input: 273
+  input: 0
   notePrefab: {fileID: 3329274389512234030, guid: dc90de80483d1004db0a2c34628e1169,
     type: 3}
   timeStamps: []
@@ -2907,7 +2907,7 @@ Transform:
   m_GameObject: {fileID: 2039850728}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 7.25, y: -0.2, z: 0}
+  m_LocalPosition: {x: 7.35, y: -0.2, z: 0}
   m_LocalScale: {x: 4, y: 0.1, z: 0.10000001}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3010,7 +3010,7 @@ Transform:
   m_GameObject: {fileID: 2076117548}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 10, y: -0.2, z: 1.5}
+  m_LocalPosition: {x: 10, y: 0, z: 1.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3029,7 +3029,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   noteRestriction: 11
-  input: 275
+  input: 0
   notePrefab: {fileID: 3329274389512234030, guid: f07e6677e3a9a3248824aa11cb4f3ef1,
     type: 3}
   timeStamps: []
