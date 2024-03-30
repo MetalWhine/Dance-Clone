@@ -7,26 +7,37 @@ using System.IO;
 using UnityEngine.Networking;
 using System;
 
+// Notes that are used
+// Keyboard shortcut: R, T, Y, U
+// Keys: F, G, A, B
+
 public class SongManager : MonoBehaviour
 {
     public static SongManager Instance;
+
+    [Header("Music Player")]
     public AudioSource audioSource;
+
+    [Header("Midi File Location")]
+    public string fileLocation;
+
+    [Header("Lanes in Scene")]
     public Lane[] lanes;
+
+    [Header("Timing Settings")]
     public float songDelayInSeconds;
     public double marginOfError; // in seconds
-
     public int inputDelayInMilliseconds;
-    
-
-    public string fileLocation;
     public float noteTime;
-    public float noteSpawnY;
-    public float noteTapY;
-    public float noteDespawnY
+
+    [Header("Note positioning data")]
+    public float noteSpawnZ;
+    public float noteTapZ;
+    public float noteDespawnZ
     {
         get
         {
-            return noteTapY - (noteSpawnY - noteTapY);
+            return noteTapZ - (noteSpawnZ - noteTapZ);
         }
     }
 
@@ -35,36 +46,7 @@ public class SongManager : MonoBehaviour
     void Start()
     {
         Instance = this;
-        if (Application.streamingAssetsPath.StartsWith("http://") || Application.streamingAssetsPath.StartsWith("https://"))
-        {
-            StartCoroutine(ReadFromWebsite());
-        }
-        else
-        {
-            ReadFromFile();
-        }
-    }
-
-    private IEnumerator ReadFromWebsite()
-    {
-        using (UnityWebRequest www = UnityWebRequest.Get(Application.streamingAssetsPath + "/" + fileLocation))
-        {
-            yield return www.SendWebRequest();
-
-            if (www.isNetworkError || www.isHttpError)
-            {
-                Debug.LogError(www.error);
-            }
-            else
-            {
-                byte[] results = www.downloadHandler.data;
-                using (var stream = new MemoryStream(results))
-                {
-                    midiFile = MidiFile.Read(stream);
-                    GetDataFromMidi();
-                }
-            }
-        }
+        ReadFromFile();
     }
 
     private void ReadFromFile()
@@ -89,10 +71,5 @@ public class SongManager : MonoBehaviour
     public static double GetAudioSourceTime()
     {
         return (double)Instance.audioSource.timeSamples / Instance.audioSource.clip.frequency;
-    }
-
-    void Update()
-    {
-        
     }
 }
