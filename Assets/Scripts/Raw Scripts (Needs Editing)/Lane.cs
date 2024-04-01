@@ -62,27 +62,36 @@ public class Lane : MonoBehaviour
             double marginOfError = SongManager.Instance.marginOfError;
             double audioTime = SongManager.GetAudioSourceTime() - (SongManager.Instance.inputDelayInMilliseconds / 1000.0);
 
-            //if (Input.GetKeyDown(input))
-            //{
-            //    if (Math.Abs(audioTime - timeStamp) < marginOfError)
-            //    {
-            //        HitEvent.Raise();
-            //        print($"Hit on {inputIndex} note");
-            //        Destroy(notes[inputIndex].gameObject);
-            //        inputIndex++;
-            //    }
-            //    else
-            //    {
-            //        print($"Hit inaccurate on {inputIndex} note with {Math.Abs(audioTime - timeStamp)} delay");
-            //    }
-            //}
+            // Moved Input method to its own function
+
             if (timeStamp + marginOfError <= audioTime)
             {
                 MissEvent.Raise();
                 print($"Missed {inputIndex} note");
                 inputIndex++;
             }
-        }       
-    
+        }
+    }
+
+    public void NoteInput()
+    {
+        if (inputIndex < timeStamps.Count)
+        {
+            double timeStamp = timeStamps[inputIndex];
+            double marginOfError = SongManager.Instance.marginOfError;
+            double audioTime = SongManager.GetAudioSourceTime() - (SongManager.Instance.inputDelayInMilliseconds / 1000.0);
+
+            if (Math.Abs(audioTime - timeStamp) < marginOfError)
+            {
+                HitEvent.Raise();
+                print($"Hit on {inputIndex} note");
+                Destroy(notes[inputIndex].gameObject);
+                inputIndex++;
+            }
+            else
+            {
+                print($"Hit inaccurate on {inputIndex} note with {Math.Abs(audioTime - timeStamp)} delay");
+            }
+        }
     }
 }

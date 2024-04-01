@@ -39,4 +39,13 @@ public class Note : MonoBehaviour
             transform.localPosition = Vector3.Lerp(Vector3.forward * SongManager.Instance.noteSpawnZ, Vector3.forward * SongManager.Instance.noteDespawnZ, t);
         }
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.tag == "Player")
+        {
+            Debug.Log(other);
+            NoteHitEvent.Raise();
+        }
+    }
 }
