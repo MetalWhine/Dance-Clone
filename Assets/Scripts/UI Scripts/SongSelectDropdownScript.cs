@@ -6,7 +6,7 @@ public class SongSelectDropdownScript : MonoBehaviour
 {
     public GameEvent OnChangeSong;
 
-    private void OnEnable()
+    private void Awake()
     {
         OnChangeSong.Raise(this, "Odo Scene");
     }

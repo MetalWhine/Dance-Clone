@@ -2,17 +2,57 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
 public class SceneManagement : MonoBehaviour
 {
-    private string targetScene;
+
+    public static SceneManagement instance;
+
+    public string targetScene;
+
+    private string baseScene = "Odo Scene";
+    private string difficulty = "Easy";
+
+    public GameEvent changingScene;
+
+    private void Awake()
+    {
+        if(instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(instance);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
 
     public void ChangeTargetScene(Component sender, object newTarget)
     {
         if(newTarget is string)
         {
-            Debug.Log(newTarget.ToString());
-            targetScene = newTarget.ToString();
+            if(SceneManager.GetActiveScene().name == "Menu Scene")
+            {
+                baseScene = newTarget.ToString();
+                targetScene = baseScene + " - " + difficulty;
+                changingScene.Raise(this, targetScene);
+            }
+            else
+            {
+                targetScene = newTarget.ToString();
+                changingScene.Raise(this, targetScene);
+            }
+        }
+    }
+
+    public void ModifyTargetScene(Component sender, object newTarget)
+    {
+        if (newTarget is string)
+        {
+            difficulty = newTarget.ToString();
+            targetScene = baseScene + " - " + difficulty;
+            Debug.Log(targetScene);
+            changingScene.Raise(this, targetScene);
         }
     }
 
