@@ -30,7 +30,7 @@ public class ScoreManager : MonoBehaviour, IDataPersistence
         data.SongStatsPercent.TryGetValue(scene, out bestPercent);
     }
 
-    public void SaveData(ref GameData data)
+    public void SaveData(GameData data)
     {
         string scene = SceneManager.GetActiveScene().name;
         if (data.SongStatsScore.ContainsKey(scene))
@@ -49,6 +49,7 @@ public class ScoreManager : MonoBehaviour, IDataPersistence
     {
         Instance = this;
         comboScore = 0;
+        totalScore = 0;
     }
     public static void hit(Component x, object i)
     {

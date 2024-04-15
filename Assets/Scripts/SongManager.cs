@@ -52,7 +52,7 @@ public class SongManager : MonoBehaviour, IDataPersistence
         this.playCount = data.PlayCount;
     }
 
-    public void SaveData(ref GameData data)
+    public void SaveData(GameData data)
     {
         data.PlayCount = this.playCount;
     }

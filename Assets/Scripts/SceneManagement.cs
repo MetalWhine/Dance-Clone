@@ -63,20 +63,15 @@ public class SceneManagement : MonoBehaviour
     }
 
     public void LoadScene(){
+        DataPersistenceManager.instance.SaveGame();
         int SceneIndex = SceneUtility.GetBuildIndexByScenePath(targetScene);
-        if(SceneIndex != -1){ SceneManager.LoadScene(targetScene); }
+        if(SceneIndex != -1){ SceneManager.LoadSceneAsync(targetScene); }
         else { Debug.LogWarning("No scene called: " + targetScene + " Exists!"); }
     }
 
     public void LoadScene(string sceneName)
     {
-        int SceneIndex = SceneUtility.GetBuildIndexByScenePath(sceneName);
-        if (SceneIndex != -1) { SceneManager.LoadScene(sceneName); }
-        else { Debug.LogWarning("No scene called: " + sceneName + " Exists!"); }
-    }
-
-    public void LoadSceneAsync(string sceneName)
-    {
+        DataPersistenceManager.instance.SaveGame();
         int SceneIndex = SceneUtility.GetBuildIndexByScenePath(sceneName);
         if (SceneIndex != -1) { SceneManager.LoadSceneAsync(sceneName); }
         else { Debug.LogWarning("No scene called: " + sceneName + " Exists!"); }
