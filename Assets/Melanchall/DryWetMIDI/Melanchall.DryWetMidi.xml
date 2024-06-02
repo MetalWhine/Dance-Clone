@@ -2474,7 +2474,7 @@
             <see cref="P:Melanchall.DryWetMidi.Core.UnknownChunk.Data"/> property will hold chunk's data and <see cref="P:Melanchall.DryWetMidi.Core.MidiChunk.ChunkId"/> will hold the ID of a chunk.
             </para>
             <para>
-            See <see href="https://www.midi.org/specifications/file-format-specifications/standard-midi-files"/> for detailed MIDI file specification.
+            See <see href="https://midi.org/standard-midi-files-specification"/> for detailed MIDI file specification.
             </para>
             </remarks>
         </member>
@@ -2618,7 +2618,7 @@
             </summary>
             <remarks>
             <para>
-            See <see href="https://www.midi.org/specifications/file-format-specifications/standard-midi-files"/> for detailed MIDI file specification.
+            See <see href="https://midi.org/standard-midi-files-specification"/> for detailed MIDI file specification.
             </para>
             </remarks>
         </member>
@@ -2726,7 +2726,7 @@
             Chunks DryWetMIDI doesn't know about will be read as an instances of the <see cref="T:Melanchall.DryWetMidi.Core.UnknownChunk"/>.
             </para>
             <para>
-            See <see href="https://www.midi.org/specifications/file-format-specifications/standard-midi-files"/> for detailed MIDI file specification.
+            See <see href="https://midi.org/standard-midi-files-specification"/> for detailed MIDI file specification.
             </para>
             </remarks>
         </member>
@@ -3236,7 +3236,7 @@
             See <see href="https://melanchall.github.io/drywetmidi/articles/custom-data-structures/Custom-meta-events.html">Custom meta events</see> article to learn more.
             </para>
             <para>
-            See <see href="https://www.midi.org/specifications/file-format-specifications/standard-midi-files"/> for detailed MIDI file specification.
+            See <see href="https://midi.org/standard-midi-files-specification"/> for detailed MIDI file specification.
             </para>
             </remarks>
         </member>
@@ -3311,7 +3311,7 @@
             </summary>
             <remarks>
             <para>
-            See <see href="https://www.midi.org/specifications/file-format-specifications/standard-midi-files"/> for detailed MIDI file specification.
+            See <see href="https://midi.org/standard-midi-files-specification"/> for detailed MIDI file specification.
             </para>
             </remarks>
         </member>
@@ -6766,7 +6766,7 @@
             (<see cref="M:Melanchall.DryWetMidi.Core.MidiFile.Write(System.String,System.Boolean,Melanchall.DryWetMidi.Core.MidiFileFormat,Melanchall.DryWetMidi.Core.WritingSettings)"/> or
             <see cref="M:Melanchall.DryWetMidi.Core.MidiFile.Write(System.IO.Stream,Melanchall.DryWetMidi.Core.MidiFileFormat,Melanchall.DryWetMidi.Core.WritingSettings)"/>).</para>
             <para>
-            See <see href="https://www.midi.org/specifications/file-format-specifications/standard-midi-files"/> for detailed MIDI file specification.
+            See <see href="https://midi.org/standard-midi-files-specification"/> for detailed MIDI file specification.
             </para>
             </remarks>
             <seealso cref="T:Melanchall.DryWetMidi.Core.ReadingSettings"/>
@@ -6841,12 +6841,12 @@
         </member>
         <member name="P:Melanchall.DryWetMidi.Core.MidiFile.OriginalFormat">
             <summary>
-            Gets original format of the file was read or <c>null</c> if the current <see cref="T:Melanchall.DryWetMidi.Core.MidiFile"/>
+            Gets original format of the file that was read or <c>null</c> if the current <see cref="T:Melanchall.DryWetMidi.Core.MidiFile"/>
             was created by constructor.
             </summary>
             <exception cref="T:Melanchall.DryWetMidi.Core.UnknownFileFormatException">File format is unknown.</exception>
             <exception cref="T:System.InvalidOperationException">Unable to get original format of the file. It means
-            the current <see cref="T:Melanchall.DryWetMidi.Core.MidiFile"/> was created via constructor rather than via <c>Read</c> method.</exception>
+            the current <see cref="T:Melanchall.DryWetMidi.Core.MidiFile"/> was created not as a result of reading the file.</exception>
         </member>
         <member name="M:Melanchall.DryWetMidi.Core.MidiFile.Read(System.String,Melanchall.DryWetMidi.Core.ReadingSettings)">
             <summary>
@@ -8747,12 +8747,22 @@
             <summary>
             Gets or sets absolute time of the chord in units defined by the time division of a MIDI file.
             </summary>
+            <remarks>
+            Note that the returned value will be in ticks (not seconds, not milliseconds and so on).
+            Please read <see href="https://melanchall.github.io/drywetmidi/articles/high-level-managing/Time-and-length.html">Time and length</see> article to learn how you can
+            get the time in different representations.
+            </remarks>
             <exception cref="T:System.ArgumentOutOfRangeException"><paramref name="value"/> is negative.</exception>
         </member>
         <member name="P:Melanchall.DryWetMidi.Interaction.Chord.Length">
             <summary>
             Gets or sets the length of the chord in units defined by the time division of a MIDI file.
             </summary>
+            <remarks>
+            Note that the returned value will be in ticks (not seconds, not milliseconds and so on).
+            Please read <see href="https://melanchall.github.io/drywetmidi/articles/high-level-managing/Time-and-length.html">Time and length</see> article to learn how you can
+            get the length in different representations.
+            </remarks>
             <exception cref="T:System.ArgumentOutOfRangeException"><paramref name="value"/> is negative.</exception>
         </member>
         <member name="P:Melanchall.DryWetMidi.Interaction.Chord.EndTime">
@@ -9429,8 +9439,6 @@
             <param name="settings">Settings according to which objects should be detected and built.</param>
             <returns>A lazy collection of objects built on top of <paramref name="midiEvents"/>.</returns>
             <exception cref="T:System.ArgumentNullException"><paramref name="midiEvents"/> is <c>null</c>.</exception>
-            <exception cref="T:System.ArgumentOutOfRangeException"><paramref name="objectType"/> contains the
-            <see cref="F:Melanchall.DryWetMidi.Interaction.ObjectType.Rest"/> which is not supported by the method.</exception>
         </member>
         <member name="M:Melanchall.DryWetMidi.Interaction.GetObjectsUtilities.GetObjects(Melanchall.DryWetMidi.Core.EventsCollection,Melanchall.DryWetMidi.Interaction.ObjectType,Melanchall.DryWetMidi.Interaction.ObjectDetectionSettings)">
             <summary>
@@ -9507,11 +9515,6 @@
             Gets or sets settings which define how chords should be detected and built.
             </summary>
         </member>
-        <member name="P:Melanchall.DryWetMidi.Interaction.ObjectDetectionSettings.RestDetectionSettings">
-            <summary>
-            Gets or sets settings which define how rests should be detected and built.
-            </summary>
-        </member>
         <member name="T:Melanchall.DryWetMidi.Interaction.ObjectType">
             <summary>
             The type of objects to get with methods of <see cref="T:Melanchall.DryWetMidi.Interaction.GetObjectsUtilities"/>.
@@ -9531,140 +9534,6 @@
             <summary>
             Represents a chord (see <see cref="T:Melanchall.DryWetMidi.Interaction.Chord"/>).
             </summary>
-        </member>
-        <member name="F:Melanchall.DryWetMidi.Interaction.ObjectType.Rest">
-            <summary>
-            Represents a rest (see <see cref="T:Melanchall.DryWetMidi.Interaction.Rest"/>).
-            </summary>
-        </member>
-        <member name="T:Melanchall.DryWetMidi.Interaction.Rest">
-            <summary>
-            Represents a musical rest. More info in the
-            <see href="https://melanchall.github.io/drywetmidi/articles/high-level-managing/Getting-objects.html#rests">Getting objects: GetObjects: Rests</see> article.
-            </summary>
-        </member>
-        <member name="E:Melanchall.DryWetMidi.Interaction.Rest.TimeChanged">
-            <summary>
-            Occurs when the time of an object has been changed.
-            </summary>
-        </member>
-        <member name="E:Melanchall.DryWetMidi.Interaction.Rest.LengthChanged">
-            <summary>
-            Occurs when the length of an object has been changed.
-            </summary>
-        </member>
-        <member name="P:Melanchall.DryWetMidi.Interaction.Rest.Time">
-            <summary>
-            Gets start time of an object.
-            </summary>
-        </member>
-        <member name="P:Melanchall.DryWetMidi.Interaction.Rest.Length">
-            <summary>
-            Gets length of an object.
-            </summary>
-        </member>
-        <member name="P:Melanchall.DryWetMidi.Interaction.Rest.EndTime">
-            <summary>
-            Gets the end time of an object.
-            </summary>
-        </member>
-        <member name="P:Melanchall.DryWetMidi.Interaction.Rest.Channel">
-            <summary>
-            Gets a channel the rest was constructed for.
-            </summary>
-        </member>
-        <member name="P:Melanchall.DryWetMidi.Interaction.Rest.NoteNumber">
-            <summary>
-            Gets a note number the rest was constructed for.
-            </summary>
-        </member>
-        <member name="M:Melanchall.DryWetMidi.Interaction.Rest.op_Equality(Melanchall.DryWetMidi.Interaction.Rest,Melanchall.DryWetMidi.Interaction.Rest)">
-            <summary>
-            Determines if two <see cref="T:Melanchall.DryWetMidi.Interaction.Rest"/> objects are equal.
-            </summary>
-            <param name="rest1">The first <see cref="T:Melanchall.DryWetMidi.Interaction.Rest"/> to compare.</param>
-            <param name="rest2">The second <see cref="T:Melanchall.DryWetMidi.Interaction.Rest"/> to compare.</param>
-            <returns><c>true</c> if the rests are equal, <c>false</c> otherwise.</returns>
-        </member>
-        <member name="M:Melanchall.DryWetMidi.Interaction.Rest.op_Inequality(Melanchall.DryWetMidi.Interaction.Rest,Melanchall.DryWetMidi.Interaction.Rest)">
-            <summary>
-            Determines if two <see cref="T:Melanchall.DryWetMidi.Interaction.Rest"/> objects are not equal.
-            </summary>
-            <param name="rest1">The first <see cref="T:Melanchall.DryWetMidi.Interaction.Rest"/> to compare.</param>
-            <param name="rest2">The second <see cref="T:Melanchall.DryWetMidi.Interaction.Rest"/> to compare.</param>
-            <returns><c>false</c> if the rests are equal, <c>true</c> otherwise.</returns>
-        </member>
-        <member name="M:Melanchall.DryWetMidi.Interaction.Rest.Clone">
-            <summary>
-            Clones object by creating a copy of it.
-            </summary>
-            <returns>Copy of the object.</returns>
-        </member>
-        <member name="M:Melanchall.DryWetMidi.Interaction.Rest.Split(System.Int64)">
-            <inheritdoc/>
-        </member>
-        <member name="M:Melanchall.DryWetMidi.Interaction.Rest.ToString">
-            <summary>
-            Returns a string that represents the current object.
-            </summary>
-            <returns>A string that represents the current object.</returns>
-        </member>
-        <member name="M:Melanchall.DryWetMidi.Interaction.Rest.Equals(System.Object)">
-            <summary>
-            Determines whether the specified object is equal to the current object.
-            </summary>
-            <param name="obj">The object to compare with the current object.</param>
-            <returns><c>true</c> if the specified object is equal to the current object; otherwise, <c>false</c>.</returns>
-        </member>
-        <member name="M:Melanchall.DryWetMidi.Interaction.Rest.GetHashCode">
-            <summary>
-            Serves as the default hash function.
-            </summary>
-            <returns>A hash code for the current object.</returns>
-        </member>
-        <member name="T:Melanchall.DryWetMidi.Interaction.RestSeparationPolicy">
-            <summary>
-            Determines a rule for creating rests. The default value is <see cref="F:Melanchall.DryWetMidi.Interaction.RestSeparationPolicy.NoSeparation"/>.
-            More info in the
-            <see href="https://melanchall.github.io/drywetmidi/articles/high-level-managing/Getting-objects.html#rests">Getting objects: GetObjects: Rests</see> article.
-            </summary>
-        </member>
-        <member name="F:Melanchall.DryWetMidi.Interaction.RestSeparationPolicy.NoSeparation">
-            <summary>
-            Rests should be constructed only when there are no notes at all on any channel.
-            </summary>
-        </member>
-        <member name="F:Melanchall.DryWetMidi.Interaction.RestSeparationPolicy.SeparateByChannel">
-            <summary>
-            Rests should be constructed individually for each channel ignoring note number.
-            </summary>
-        </member>
-        <member name="F:Melanchall.DryWetMidi.Interaction.RestSeparationPolicy.SeparateByNoteNumber">
-            <summary>
-            Rests should be constructed individually for each note number ignoring channel.
-            </summary>
-        </member>
-        <member name="F:Melanchall.DryWetMidi.Interaction.RestSeparationPolicy.SeparateByChannelAndNoteNumber">
-            <summary>
-            Rests should be constructed individually for each channel and note number.
-            </summary>
-        </member>
-        <member name="T:Melanchall.DryWetMidi.Interaction.RestDetectionSettings">
-            <summary>
-            Settings which define how rests should be detected and built.
-            </summary>
-            <remarks>
-            Please see <see href="https://melanchall.github.io/drywetmidi/articles/high-level-managing/Getting-objects.html#rests">Getting objects
-            (section GetObjects → Rests)</see> article to learn more.
-            </remarks>
-            <seealso cref="T:Melanchall.DryWetMidi.Interaction.GetObjectsUtilities"/>
-        </member>
-        <member name="P:Melanchall.DryWetMidi.Interaction.RestDetectionSettings.RestSeparationPolicy">
-            <summary>
-            Gets or sets a value that defines a rule for creating rests. The default value is
-            <see cref="F:Melanchall.DryWetMidi.Interaction.RestSeparationPolicy.NoSeparation"/>.
-            </summary>
-            <exception cref="T:System.ComponentModel.InvalidEnumArgumentException"><paramref name="value"/> specified an invalid value.</exception>
         </member>
         <member name="T:Melanchall.DryWetMidi.Interaction.ArbitraryGrid">
             <summary>
@@ -9824,8 +9693,14 @@
         </member>
         <member name="P:Melanchall.DryWetMidi.Interaction.ILengthedObject.Length">
             <summary>
-            Gets or sets the length of an object.
+            Gets the length of an object.
             </summary>
+            <remarks>
+            Note that the returned value will be in ticks (not seconds, not milliseconds and so on).
+            Please read <see href="https://melanchall.github.io/drywetmidi/articles/high-level-managing/Time-and-length.html">Time and length</see> article to learn how you can
+            get the length in different representations.
+            </remarks>
+            <exception cref="T:System.ArgumentOutOfRangeException"><paramref name="value"/> is negative.</exception>
         </member>
         <member name="P:Melanchall.DryWetMidi.Interaction.ILengthedObject.EndTime">
             <summary>
@@ -10385,12 +10260,22 @@
             <summary>
             Gets or sets absolute time of the note in units defined by the time division of a MIDI file.
             </summary>
+            <remarks>
+            Note that the returned value will be in ticks (not seconds, not milliseconds and so on).
+            Please read <see href="https://melanchall.github.io/drywetmidi/articles/high-level-managing/Time-and-length.html">Time and length</see> article to learn how you can
+            get the time in different representations.
+            </remarks>
             <exception cref="T:System.ArgumentOutOfRangeException"><paramref name="value"/> is negative.</exception>
         </member>
         <member name="P:Melanchall.DryWetMidi.Interaction.Note.Length">
             <summary>
             Gets or sets the length of the note in units defined by the time division of a MIDI file.
             </summary>
+            <remarks>
+            Note that the returned value will be in ticks (not seconds, not milliseconds and so on).
+            Please read <see href="https://melanchall.github.io/drywetmidi/articles/high-level-managing/Time-and-length.html">Time and length</see> article to learn how you can
+            get the length in different representations.
+            </remarks>
             <exception cref="T:System.ArgumentOutOfRangeException"><paramref name="value"/> is negative.</exception>
         </member>
         <member name="P:Melanchall.DryWetMidi.Interaction.Note.EndTime">
@@ -11071,6 +10956,11 @@
             <summary>
             Gets or sets absolute time of the parameter data in units defined by the time division of a MIDI file.
             </summary>
+            <remarks>
+            Note that the returned value will be in ticks (not seconds, not milliseconds and so on).
+            Please read <see href="https://melanchall.github.io/drywetmidi/articles/high-level-managing/Time-and-length.html">Time and length</see> article to learn how you can
+            get the time in different representations.
+            </remarks>
             <exception cref="T:System.ArgumentOutOfRangeException"><paramref name="value"/> is negative.</exception>
         </member>
         <member name="M:Melanchall.DryWetMidi.Interaction.Parameter.Clone">
@@ -11551,6 +11441,174 @@
         </member>
         <member name="M:Melanchall.DryWetMidi.Interaction.TuningProgramChangeParameter.ToString">
             <inheritdoc/>
+        </member>
+        <member name="T:Melanchall.DryWetMidi.Interaction.Rest">
+            <summary>
+            Represents a musical rest. More info in the <see href="https://melanchall.github.io/drywetmidi/articles/high-level-managing/Getting-objects.html#rests">Getting objects: Rests</see> article.
+            </summary>
+            <seealso cref="T:Melanchall.DryWetMidi.Interaction.RestsUtilities"/>
+            <seealso cref="T:Melanchall.DryWetMidi.Interaction.RestDetectionSettings"/>
+        </member>
+        <member name="E:Melanchall.DryWetMidi.Interaction.Rest.TimeChanged">
+            <summary>
+            Occurs when the time of an object has been changed.
+            </summary>
+        </member>
+        <member name="E:Melanchall.DryWetMidi.Interaction.Rest.LengthChanged">
+            <summary>
+            Occurs when the length of an object has been changed.
+            </summary>
+        </member>
+        <member name="P:Melanchall.DryWetMidi.Interaction.Rest.Time">
+            <inheritdoc/>
+        </member>
+        <member name="P:Melanchall.DryWetMidi.Interaction.Rest.Length">
+            <inheritdoc/>
+        </member>
+        <member name="P:Melanchall.DryWetMidi.Interaction.Rest.EndTime">
+            <inheritdoc/>
+        </member>
+        <member name="P:Melanchall.DryWetMidi.Interaction.Rest.Key">
+            <summary>
+            Gets the key of objects the current rest has been built for. Please read
+            <see href="https://melanchall.github.io/drywetmidi/articles/high-level-managing/Getting-objects.html#rests">Getting objects: Rests</see> article to
+            understand the key concept.
+            </summary>
+        </member>
+        <member name="M:Melanchall.DryWetMidi.Interaction.Rest.op_Equality(Melanchall.DryWetMidi.Interaction.Rest,Melanchall.DryWetMidi.Interaction.Rest)">
+            <summary>
+            Determines if two <see cref="T:Melanchall.DryWetMidi.Interaction.Rest"/> objects are equal.
+            </summary>
+            <param name="rest1">The first <see cref="T:Melanchall.DryWetMidi.Interaction.Rest"/> to compare.</param>
+            <param name="rest2">The second <see cref="T:Melanchall.DryWetMidi.Interaction.Rest"/> to compare.</param>
+            <returns><c>true</c> if the rests are equal, <c>false</c> otherwise.</returns>
+        </member>
+        <member name="M:Melanchall.DryWetMidi.Interaction.Rest.op_Inequality(Melanchall.DryWetMidi.Interaction.Rest,Melanchall.DryWetMidi.Interaction.Rest)">
+            <summary>
+            Determines if two <see cref="T:Melanchall.DryWetMidi.Interaction.Rest"/> objects are not equal.
+            </summary>
+            <param name="rest1">The first <see cref="T:Melanchall.DryWetMidi.Interaction.Rest"/> to compare.</param>
+            <param name="rest2">The second <see cref="T:Melanchall.DryWetMidi.Interaction.Rest"/> to compare.</param>
+            <returns><c>false</c> if the rests are equal, <c>true</c> otherwise.</returns>
+        </member>
+        <member name="M:Melanchall.DryWetMidi.Interaction.Rest.Clone">
+            <summary>
+            Clones object by creating a copy of it.
+            </summary>
+            <returns>Copy of the object.</returns>
+        </member>
+        <member name="M:Melanchall.DryWetMidi.Interaction.Rest.Split(System.Int64)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Melanchall.DryWetMidi.Interaction.Rest.ToString">
+            <summary>
+            Returns a string that represents the current object.
+            </summary>
+            <returns>A string that represents the current object.</returns>
+        </member>
+        <member name="M:Melanchall.DryWetMidi.Interaction.Rest.Equals(System.Object)">
+            <summary>
+            Determines whether the specified object is equal to the current object.
+            </summary>
+            <param name="obj">The object to compare with the current object.</param>
+            <returns><c>true</c> if the specified object is equal to the current object; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:Melanchall.DryWetMidi.Interaction.Rest.GetHashCode">
+            <summary>
+            Serves as the default hash function.
+            </summary>
+            <returns>A hash code for the current object.</returns>
+        </member>
+        <member name="T:Melanchall.DryWetMidi.Interaction.RestDetectionSettings">
+            <summary>
+            Settings which define how rests should be detected and built. More info in the
+            <see href="https://melanchall.github.io/drywetmidi/articles/high-level-managing/Getting-objects.html#rests">Getting objects: Rests</see> article.
+            </summary>
+            <seealso cref="T:Melanchall.DryWetMidi.Interaction.RestsUtilities"/>
+        </member>
+        <member name="F:Melanchall.DryWetMidi.Interaction.RestDetectionSettings.NoNotes">
+            <summary>
+            Rests will be built only at spaces without notes at all.
+            </summary>
+        </member>
+        <member name="F:Melanchall.DryWetMidi.Interaction.RestDetectionSettings.NoNotesByChannel">
+            <summary>
+            Rests will be built between notes separately for each channel.
+            </summary>
+        </member>
+        <member name="F:Melanchall.DryWetMidi.Interaction.RestDetectionSettings.NoNotesByNoteNumber">
+            <summary>
+            Rests will be built between notes separately for each note number.
+            </summary>
+        </member>
+        <member name="F:Melanchall.DryWetMidi.Interaction.RestDetectionSettings.NoNotesByChannelAndNoteNumber">
+            <summary>
+            Rests will be built between notes separately for each channel and note number.
+            </summary>
+        </member>
+        <member name="F:Melanchall.DryWetMidi.Interaction.RestDetectionSettings.NoChords">
+            <summary>
+            Rests will be built only at spaces without chords at all.
+            </summary>
+        </member>
+        <member name="F:Melanchall.DryWetMidi.Interaction.RestDetectionSettings.NoChordsByChannel">
+            <summary>
+            Rests will be built between chords separately for each channel.
+            </summary>
+        </member>
+        <member name="P:Melanchall.DryWetMidi.Interaction.RestDetectionSettings.KeySelector">
+            <summary>
+            Gets or sets a function that returns the key of an object. Please read
+            <see href="https://melanchall.github.io/drywetmidi/articles/high-level-managing/Getting-objects.html#rests">Getting objects: Rests</see> article to
+            understand the key concept.
+            </summary>
+        </member>
+        <member name="T:Melanchall.DryWetMidi.Interaction.RestsUtilities">
+            <summary>
+            Provides methods to get rests between different objects.
+            </summary>
+        </member>
+        <member name="M:Melanchall.DryWetMidi.Interaction.RestsUtilities.WithRests(System.Collections.Generic.IEnumerable{Melanchall.DryWetMidi.Interaction.ITimedObject},Melanchall.DryWetMidi.Interaction.RestDetectionSettings)">
+            <summary>
+            Returns a collection of the specified objects and rests between them according to
+            the provided settings. Objects (including rests) in the result collection are
+            ordered by time.
+            </summary>
+            <param name="timedObjects">The input objects collection.</param>
+            <param name="settings">Settings according to which rests should be detected and built.</param>
+            <returns>Collection with objects from <paramref name="timedObjects"/> and rests
+            between them.</returns>
+            <exception cref="T:System.ArgumentNullException">
+            <para>One of the following errors occurred:</para>
+            <list type="bullet">
+            <item>
+            <description><paramref name="timedObjects"/> is <c>null</c>.</description>
+            </item>
+            <item>
+            <description><paramref name="settings"/> is <c>null</c>.</description>
+            </item>
+            </list>
+            </exception>
+        </member>
+        <member name="M:Melanchall.DryWetMidi.Interaction.RestsUtilities.GetRests(System.Collections.Generic.IEnumerable{Melanchall.DryWetMidi.Interaction.ITimedObject},Melanchall.DryWetMidi.Interaction.RestDetectionSettings)">
+            <summary>
+            Returns rests between objects within the specified collection according to
+            the provided settings. Rests in the result collection are ordered by time.
+            </summary>
+            <param name="timedObjects">The input objects collection.</param>
+            <param name="settings">Settings according to which rests should be detected and built.</param>
+            <returns>Collection of rests between objects within <paramref name="timedObjects"/>.</returns>
+            <exception cref="T:System.ArgumentNullException">
+            <para>One of the following errors occurred:</para>
+            <list type="bullet">
+            <item>
+            <description><paramref name="timedObjects"/> is <c>null</c>.</description>
+            </item>
+            <item>
+            <description><paramref name="settings"/> is <c>null</c>.</description>
+            </item>
+            </list>
+            </exception>
         </member>
         <member name="T:Melanchall.DryWetMidi.Interaction.Tempo">
             <summary>
@@ -12482,6 +12540,11 @@
             <summary>
             Gets or sets absolute time of the event in units defined by the time division of a MIDI file.
             </summary>
+            <remarks>
+            Note that the returned value will be in ticks (not seconds, not milliseconds and so on).
+            Please read <see href="https://melanchall.github.io/drywetmidi/articles/high-level-managing/Time-and-length.html">Time and length</see> article to learn how you can
+            get the time in different representations.
+            </remarks>
             <exception cref="T:System.ArgumentOutOfRangeException"><paramref name="value"/> is negative.</exception>
         </member>
         <member name="M:Melanchall.DryWetMidi.Interaction.TimedEvent.Clone">
@@ -13043,8 +13106,14 @@
         </member>
         <member name="P:Melanchall.DryWetMidi.Interaction.ITimedObject.Time">
             <summary>
-            Gets or sets the time of an object.
+            Gets the start time of an object.
             </summary>
+            <remarks>
+            Note that the returned value will be in ticks (not seconds, not milliseconds and so on).
+            Please read <see href="https://melanchall.github.io/drywetmidi/articles/high-level-managing/Time-and-length.html">Time and length</see> article to learn how you can
+            get the time in different representations.
+            </remarks>
+            <exception cref="T:System.ArgumentOutOfRangeException"><paramref name="value"/> is negative.</exception>
         </member>
         <member name="M:Melanchall.DryWetMidi.Interaction.ITimedObject.Clone">
             <summary>
@@ -16753,6 +16822,12 @@
             <summary>
             Gets the MIDI time when value is changed.
             </summary>
+            <remarks>
+            Note that the returned value will be in ticks (not seconds, not milliseconds and so on).
+            Please read <see href="https://melanchall.github.io/drywetmidi/articles/high-level-managing/Time-and-length.html">Time and length</see> article to learn how you can
+            get the time in different representations.
+            </remarks>
+            <exception cref="T:System.InvalidOperationException">Setting time of value change object is not allowed.</exception>
         </member>
         <member name="P:Melanchall.DryWetMidi.Interaction.ValueChange`1.Value">
             <summary>
@@ -19597,6 +19672,16 @@
             is enabled or not.
             </summary>
         </member>
+        <member name="T:Melanchall.DryWetMidi.Multimedia.MidiEventRecordedEventArgs">
+            <summary>
+            Holds an instance of <see cref="T:Melanchall.DryWetMidi.Core.MidiEvent"/> for <see cref="E:Melanchall.DryWetMidi.Multimedia.Recording.EventRecorded"/> event.
+            </summary>
+        </member>
+        <member name="P:Melanchall.DryWetMidi.Multimedia.MidiEventRecordedEventArgs.Event">
+            <summary>
+            Gets the recorded MIDI event.
+            </summary>
+        </member>
         <member name="T:Melanchall.DryWetMidi.Multimedia.Recording">
             <summary>
             Provides a way to record MIDI data received by an input MIDI device. More info in the
@@ -19611,6 +19696,11 @@
         <member name="E:Melanchall.DryWetMidi.Multimedia.Recording.Stopped">
             <summary>
             Occurs when recording stopped via <see cref="M:Melanchall.DryWetMidi.Multimedia.Recording.Stop"/> method.
+            </summary>
+        </member>
+        <member name="E:Melanchall.DryWetMidi.Multimedia.Recording.EventRecorded">
+            <summary>
+            Occurs when a MIDI event is captured by the current recording.
             </summary>
         </member>
         <member name="M:Melanchall.DryWetMidi.Multimedia.Recording.#ctor(Melanchall.DryWetMidi.Interaction.TempoMap,Melanchall.DryWetMidi.Multimedia.IInputDevice)">
@@ -31374,80 +31464,178 @@
             Gets the new time of an object.
             </summary>
         </member>
-        <member name="T:Melanchall.DryWetMidi.Tools.CsvSettings">
+        <member name="T:Melanchall.DryWetMidi.Tools.CsvSerializer">
             <summary>
-            Common CSV reading/writing settings.
+            Provides methods to serialize MIDI data to CSV and deserialize it back. More info in the
+            <see href="https://melanchall.github.io/drywetmidi/articles/tools/CSV-serializer.html">CSV serializer</see> article.
             </summary>
+            <seealso cref="T:Melanchall.DryWetMidi.Tools.CsvSerializer"/>
         </member>
-        <member name="P:Melanchall.DryWetMidi.Tools.CsvSettings.CsvDelimiter">
+        <member name="M:Melanchall.DryWetMidi.Tools.CsvSerializer.DeserializeFileFromCsv(System.IO.Stream,Melanchall.DryWetMidi.Tools.CsvSerializationSettings)">
             <summary>
-            Gets or sets delimiter used to separate values in CSV representation. The default value is comma.
+            Reads a <see cref="T:Melanchall.DryWetMidi.Core.MidiFile"/> represented as CSV from the specified stream.
             </summary>
+            <param name="stream"><see cref="T:System.IO.Stream"/> to read the file from.</param>
+            <param name="settings">Settings according to which <see cref="T:Melanchall.DryWetMidi.Core.MidiFile"/> should be deserialized.</param>
+            <returns>An instance of the <see cref="T:Melanchall.DryWetMidi.Core.MidiFile"/> read from CSV representation from
+            <paramref name="stream"/>.</returns>
+            <exception cref="T:System.ArgumentException"><paramref name="stream"/> doesn't support reading.</exception>
+            <exception cref="T:System.ArgumentNullException"><paramref name="stream"/> is <c>null</c>.</exception>
+            <exception cref="T:System.FormatException">Invalid CSV representation.</exception>
         </member>
-        <member name="P:Melanchall.DryWetMidi.Tools.CsvSettings.IoBufferSize">
+        <member name="M:Melanchall.DryWetMidi.Tools.CsvSerializer.DeserializeFileFromCsv(System.String,Melanchall.DryWetMidi.Tools.CsvSerializationSettings)">
             <summary>
-            Gets or sets the size of buffer used to read/write CSV data.
+            Reads a <see cref="T:Melanchall.DryWetMidi.Core.MidiFile"/> represented as CSV from the specified file.
             </summary>
-            <exception cref="T:System.ArgumentOutOfRangeException">Value is zero or negative.</exception>
-        </member>
-        <member name="T:Melanchall.DryWetMidi.Tools.CsvConverter">
-            <summary>
-            Provides methods to convert MIDI objects to CSV representation and vice versa.
-            </summary>
-        </member>
-        <member name="M:Melanchall.DryWetMidi.Tools.CsvConverter.ConvertMidiFileToCsv(Melanchall.DryWetMidi.Core.MidiFile,System.String,System.Boolean,Melanchall.DryWetMidi.Tools.MidiFileCsvConversionSettings)">
-            <summary>
-            Converts the specified <see cref="T:Melanchall.DryWetMidi.Core.MidiFile"/> to CSV representation and writes it to a file.
-            </summary>
-            <remarks>
-            Note that <see cref="T:Melanchall.DryWetMidi.Core.MidiFile"/> can be converted to different CSV representations. You can specify desired
-            CSV layout via <paramref name="settings"/> using <see cref="P:Melanchall.DryWetMidi.Tools.MidiFileCsvConversionSettings.CsvLayout"/> property.
-            </remarks>
-            <param name="midiFile"><see cref="T:Melanchall.DryWetMidi.Core.MidiFile"/> to convert to CSV.</param>
-            <param name="filePath">Path of the output CSV file.</param>
-            <param name="overwriteFile">If <c>true</c> and file specified by <paramref name="filePath"/> already
-            exists it will be overwritten; if <c>false</c> and the file exists, exception will be thrown.</param>
-            <param name="settings">Settings according to which <paramref name="midiFile"/> must be converted.
-            Pass <c>null</c> to use default settings.</param>
-            <exception cref="T:System.ArgumentNullException"><paramref name="midiFile"/> is <c>null</c>.</exception>
-            <exception cref="T:System.ArgumentException"><paramref name="filePath"/> is a zero-length string,
+            <param name="filePath">Path to the file to read the file from.</param>
+            <param name="settings">Settings according to which <see cref="T:Melanchall.DryWetMidi.Core.MidiFile"/> should be deserialized.</param>
+            <returns>An instance of the <see cref="T:Melanchall.DryWetMidi.Core.MidiFile"/> read from CSV representation from
+            <paramref name="filePath"/>.</returns>
+            <exception cref="T:System.ArgumentException"><paramref name="filePath"/> is <c>null</c>, a zero-length string,
             contains only white space, or contains one or more invalid characters as defined by
             <see cref="F:System.IO.Path.InvalidPathChars"/>.</exception>
-            <exception cref="T:System.ArgumentNullException"><paramref name="filePath"/> is <c>null</c>.</exception>
-            <exception cref="T:System.IO.PathTooLongException">The specified path, file name, or both exceed the system-defined
-            maximum length. For example, on Windows-based platforms, paths must be less than 248 characters,
-            and file names must be less than 260 characters.</exception>
-            <exception cref="T:System.IO.DirectoryNotFoundException">The specified path is invalid, (for example,
-            it is on an unmapped drive).</exception>
-            <exception cref="T:System.IO.IOException">An I/O error occurred while writing the file.</exception>
-            <exception cref="T:System.NotSupportedException"><paramref name="filePath"/> is in an invalid format.</exception>
-            <exception cref="T:System.UnauthorizedAccessException">
+            <exception cref="T:System.FormatException">Invalid CSV representation.</exception>
+        </member>
+        <member name="M:Melanchall.DryWetMidi.Tools.CsvSerializer.DeserializeChunksFromCsv(System.IO.Stream,Melanchall.DryWetMidi.Interaction.TempoMap,Melanchall.DryWetMidi.Tools.CsvSerializationSettings)">
+            <summary>
+            Reads a collection of <see cref="T:Melanchall.DryWetMidi.Core.MidiChunk"/> represented as CSV from the specified stream.
+            </summary>
+            <param name="stream"><see cref="T:System.IO.Stream"/> to read chunks from.</param>
+            <param name="tempoMap"><see cref="T:Melanchall.DryWetMidi.Interaction.TempoMap"/> to use for time/length conversions.</param>
+            <param name="settings">Settings according to which collection of <see cref="T:Melanchall.DryWetMidi.Core.MidiChunk"/> should
+            be deserialized.</param>
+            <returns>Collection of <see cref="T:Melanchall.DryWetMidi.Core.MidiChunk"/> read from CSV representation from
+            <paramref name="stream"/>.</returns>
+            <exception cref="T:System.ArgumentException"><paramref name="stream"/> doesn't support reading.</exception>
+            <exception cref="T:System.ArgumentNullException">
             <para>One of the following errors occurred:</para>
             <list type="bullet">
             <item>
-            <description>This operation is not supported on the current platform.</description>
+            <description><paramref name="stream"/> is <c>null</c>.</description>
             </item>
             <item>
-            <description><paramref name="filePath"/> specified a directory.</description>
-            </item>
-            <item>
-            <description>The caller does not have the required permission.</description>
+            <description><paramref name="tempoMap"/> is <c>null</c>.</description>
             </item>
             </list>
             </exception>
+            <exception cref="T:System.FormatException">Invalid CSV representation.</exception>
         </member>
-        <member name="M:Melanchall.DryWetMidi.Tools.CsvConverter.ConvertMidiFileToCsv(Melanchall.DryWetMidi.Core.MidiFile,System.IO.Stream,Melanchall.DryWetMidi.Tools.MidiFileCsvConversionSettings)">
+        <member name="M:Melanchall.DryWetMidi.Tools.CsvSerializer.DeserializeChunksFromCsv(System.String,Melanchall.DryWetMidi.Interaction.TempoMap,Melanchall.DryWetMidi.Tools.CsvSerializationSettings)">
             <summary>
-            Converts the specified <see cref="T:Melanchall.DryWetMidi.Core.MidiFile"/> to CSV representation and writes it to a stream.
+            Reads a collection of <see cref="T:Melanchall.DryWetMidi.Core.MidiChunk"/> represented as CSV from the specified file.
             </summary>
+            <param name="filePath">Path to the file to read chunks from.</param>
+            <param name="tempoMap"><see cref="T:Melanchall.DryWetMidi.Interaction.TempoMap"/> to use for time/length conversions.</param>
+            <param name="settings">Settings according to which collection of <see cref="T:Melanchall.DryWetMidi.Core.MidiChunk"/> should
+            be deserialized.</param>
+            <returns>Collection of <see cref="T:Melanchall.DryWetMidi.Core.MidiChunk"/> read from CSV representation from
+            <paramref name="filePath"/>.</returns>
+            <exception cref="T:System.ArgumentException"><paramref name="filePath"/> is <c>null</c>, a zero-length string,
+            contains only white space, or contains one or more invalid characters as defined by
+            <see cref="F:System.IO.Path.InvalidPathChars"/>.</exception>
+            <exception cref="T:System.ArgumentNullException"><paramref name="tempoMap"/> is <c>null</c>.</exception>
+            <exception cref="T:System.FormatException">Invalid CSV representation.</exception>
+        </member>
+        <member name="M:Melanchall.DryWetMidi.Tools.CsvSerializer.DeserializeChunkFromCsv(System.IO.Stream,Melanchall.DryWetMidi.Interaction.TempoMap,Melanchall.DryWetMidi.Tools.CsvSerializationSettings)">
+            <summary>
+            Reads a <see cref="T:Melanchall.DryWetMidi.Core.MidiChunk"/> represented as CSV from the specified stream.
+            </summary>
+            <param name="stream"><see cref="T:System.IO.Stream"/> to read a chunk from.</param>
+            <param name="tempoMap"><see cref="T:Melanchall.DryWetMidi.Interaction.TempoMap"/> to use for time/length conversions.</param>
+            <param name="settings">Settings according to which <see cref="T:Melanchall.DryWetMidi.Core.MidiChunk"/> should
+            be deserialized.</param>
+            <returns>An instance of the <see cref="T:Melanchall.DryWetMidi.Core.MidiChunk"/> read from CSV representation from
+            <paramref name="stream"/>.</returns>
+            <exception cref="T:System.ArgumentException"><paramref name="stream"/> doesn't support reading.</exception>
+            <exception cref="T:System.ArgumentNullException">
+            <para>One of the following errors occurred:</para>
+            <list type="bullet">
+            <item>
+            <description><paramref name="stream"/> is <c>null</c>.</description>
+            </item>
+            <item>
+            <description><paramref name="tempoMap"/> is <c>null</c>.</description>
+            </item>
+            </list>
+            </exception>
+            <exception cref="T:System.FormatException">Invalid CSV representation.</exception>
+        </member>
+        <member name="M:Melanchall.DryWetMidi.Tools.CsvSerializer.DeserializeChunkFromCsv(System.String,Melanchall.DryWetMidi.Interaction.TempoMap,Melanchall.DryWetMidi.Tools.CsvSerializationSettings)">
+            <summary>
+            Reads a <see cref="T:Melanchall.DryWetMidi.Core.MidiChunk"/> represented as CSV from the specified file.
+            </summary>
+            <param name="filePath">Path to the file to read a chunk from.</param>
+            <param name="tempoMap"><see cref="T:Melanchall.DryWetMidi.Interaction.TempoMap"/> to use for time/length conversions.</param>
+            <param name="settings">Settings according to which <see cref="T:Melanchall.DryWetMidi.Core.MidiChunk"/> should
+            be deserialized.</param>
+            <returns>An instance of the <see cref="T:Melanchall.DryWetMidi.Core.MidiChunk"/> read from CSV representation from
+            <paramref name="filePath"/>.</returns>
+            <exception cref="T:System.ArgumentException"><paramref name="filePath"/> is <c>null</c>, a zero-length string,
+            contains only white space, or contains one or more invalid characters as defined by
+            <see cref="F:System.IO.Path.InvalidPathChars"/>.</exception>
+            <exception cref="T:System.ArgumentNullException"><paramref name="tempoMap"/> is <c>null</c>.</exception>
+            <exception cref="T:System.FormatException">Invalid CSV representation.</exception>
+        </member>
+        <member name="M:Melanchall.DryWetMidi.Tools.CsvSerializer.DeserializeObjectsFromCsv(System.IO.Stream,Melanchall.DryWetMidi.Interaction.TempoMap,Melanchall.DryWetMidi.Tools.CsvSerializationSettings)">
+            <summary>
+            Reads collection of <see cref="T:Melanchall.DryWetMidi.Interaction.ITimedObject"/> represented as CSV from the specified stream.
+            </summary>
+            <param name="stream"><see cref="T:System.IO.Stream"/> to read objects from.</param>
+            <param name="tempoMap"><see cref="T:Melanchall.DryWetMidi.Interaction.TempoMap"/> to use for time/length conversions.</param>
+            <param name="settings">Settings according to which collection of <see cref="T:Melanchall.DryWetMidi.Interaction.ITimedObject"/> should
+            be deserialized.</param>
+            <returns>Collection of <see cref="T:Melanchall.DryWetMidi.Interaction.ITimedObject"/> read from CSV representation from
+            <paramref name="stream"/>.</returns>
+            <exception cref="T:System.ArgumentException"><paramref name="stream"/> doesn't support reading.</exception>
+            <exception cref="T:System.ArgumentNullException">
+            <para>One of the following errors occurred:</para>
+            <list type="bullet">
+            <item>
+            <description><paramref name="stream"/> is <c>null</c>.</description>
+            </item>
+            <item>
+            <description><paramref name="tempoMap"/> is <c>null</c>.</description>
+            </item>
+            </list>
+            </exception>
+            <exception cref="T:System.FormatException">Invalid CSV representation.</exception>
+        </member>
+        <member name="M:Melanchall.DryWetMidi.Tools.CsvSerializer.DeserializeObjectsFromCsv(System.String,Melanchall.DryWetMidi.Interaction.TempoMap,Melanchall.DryWetMidi.Tools.CsvSerializationSettings)">
+            <summary>
+            Reads collection of <see cref="T:Melanchall.DryWetMidi.Interaction.ITimedObject"/> represented as CSV from the specified file.
+            </summary>
+            <param name="filePath">Path to the file to read objects from.</param>
+            <param name="tempoMap"><see cref="T:Melanchall.DryWetMidi.Interaction.TempoMap"/> to use for time/length conversions.</param>
+            <param name="settings">Settings according to which collection of <see cref="T:Melanchall.DryWetMidi.Interaction.ITimedObject"/> should
+            be deserialized.</param>
+            <returns>Collection of <see cref="T:Melanchall.DryWetMidi.Interaction.ITimedObject"/> read from CSV representation from
+            <paramref name="filePath"/>.</returns>
+            <exception cref="T:System.ArgumentException"><paramref name="filePath"/> is <c>null</c>, a zero-length string,
+            contains only white space, or contains one or more invalid characters as defined by
+            <see cref="F:System.IO.Path.InvalidPathChars"/>.</exception>
+            <exception cref="T:System.ArgumentNullException"><paramref name="tempoMap"/> is <c>null</c>.</exception>
+            <exception cref="T:System.FormatException">Invalid CSV representation.</exception>
+        </member>
+        <member name="M:Melanchall.DryWetMidi.Tools.CsvSerializer.SerializeToCsv(Melanchall.DryWetMidi.Core.MidiFile,System.IO.Stream,Melanchall.DryWetMidi.Tools.CsvSerializationSettings,Melanchall.DryWetMidi.Interaction.ObjectType,Melanchall.DryWetMidi.Interaction.ObjectDetectionSettings)">
+            <summary>
+            Writes the specified <see cref="T:Melanchall.DryWetMidi.Core.MidiFile"/> to a stream in CSV format.
+            </summary>
+            <param name="midiFile"><see cref="T:Melanchall.DryWetMidi.Core.MidiFile"/> to serialize to CSV representation.</param>
+            <param name="stream"><see cref="T:System.IO.Stream"/> to write the <paramref name="midiFile"/> to.</param>
+            <param name="settings">Settings according to which <paramref name="midiFile"/> should be serialized.</param>
+            <param name="objectType">Types of objects within track chunks of the <paramref name="midiFile"/>
+            to serialize (see Remarks section).</param>
+            <param name="objectDetectionSettings">Settings according to which objects within track chunks should be
+            detected and built.</param>
             <remarks>
-            Note that <see cref="T:Melanchall.DryWetMidi.Core.MidiFile"/> can be converted to different CSV representations. You can specify desired
-            CSV layout via <paramref name="settings"/> using <see cref="P:Melanchall.DryWetMidi.Tools.MidiFileCsvConversionSettings.CsvLayout"/> property.
+            <paramref name="objectType"/> defines what kind of objects to put to the <paramref name="objectType"/>
+            as CSV. For example, if you specify <see cref="F:Melanchall.DryWetMidi.Interaction.ObjectType.TimedEvent"/>, all events within track chunks
+            of the <paramref name="midiFile"/> will be written to the stream. If you specify <see cref="F:Melanchall.DryWetMidi.Interaction.ObjectType.Note"/>,
+            only notes will be written. If you specify <see cref="F:Melanchall.DryWetMidi.Interaction.ObjectType.Note"/> | <see cref="F:Melanchall.DryWetMidi.Interaction.ObjectType.TimedEvent"/>,
+            events and notes will be written. Please see <see href="https://melanchall.github.io/drywetmidi/articles/high-level-managing/Getting-objects.html#getobjects">Getting objects: GetObjects</see>
+            article to learn more.
             </remarks>
-            <param name="midiFile"><see cref="T:Melanchall.DryWetMidi.Core.MidiFile"/> to convert to CSV.</param>
-            <param name="stream">Stream to write CSV representation to.</param>
-            <param name="settings">Settings according to which <paramref name="midiFile"/> must be converted.
-            Pass <c>null</c> to use default settings.</param>
+            <exception cref="T:System.ArgumentException"><paramref name="stream"/> doesn't support writing.</exception>
             <exception cref="T:System.ArgumentNullException">
             <para>One of the following errors occurred:</para>
             <list type="bullet">
@@ -31459,193 +31647,60 @@
             </item>
             </list>
             </exception>
-            <exception cref="T:System.ArgumentException"><paramref name="stream"/> doesn't support writing.</exception>
-            <exception cref="T:System.IO.IOException">An I/O error occurred while writing to the stream.</exception>
-            <exception cref="T:System.ObjectDisposedException"><paramref name="stream"/> is disposed.</exception>
         </member>
-        <member name="M:Melanchall.DryWetMidi.Tools.CsvConverter.ConvertCsvToMidiFile(System.String,Melanchall.DryWetMidi.Tools.MidiFileCsvConversionSettings)">
+        <member name="M:Melanchall.DryWetMidi.Tools.CsvSerializer.SerializeToCsv(Melanchall.DryWetMidi.Core.MidiFile,System.String,System.Boolean,Melanchall.DryWetMidi.Tools.CsvSerializationSettings,Melanchall.DryWetMidi.Interaction.ObjectType,Melanchall.DryWetMidi.Interaction.ObjectDetectionSettings)">
             <summary>
-            Converts CSV representation of a MIDI file to <see cref="T:Melanchall.DryWetMidi.Core.MidiFile"/> reading CSV data from a file.
+            Writes the specified <see cref="T:Melanchall.DryWetMidi.Core.MidiFile"/> to a file in CSV format.
             </summary>
-            <remarks>
-            Note that CSV representation of a MIDI file can be different. You can specify expected CSV layout
-            via <paramref name="settings"/> using <see cref="P:Melanchall.DryWetMidi.Tools.MidiFileCsvConversionSettings.CsvLayout"/> property.
-            </remarks>
-            <param name="filePath">Path of the file with CSV representation of a MIDI file.</param>
-            <param name="settings">Settings according to which CSV data must be converted. Pass <c>null</c> to
-            use default settings.</param>
-            <returns>An instance of the <see cref="T:Melanchall.DryWetMidi.Core.MidiFile"/> representing a MIDI file written in CSV format.</returns>
-            <exception cref="T:System.ArgumentException"><paramref name="filePath"/> is a zero-length string,
-            contains only white space, or contains one or more invalid characters as defined by
-            <see cref="F:System.IO.Path.InvalidPathChars"/>.</exception>
-            <exception cref="T:System.ArgumentNullException"><paramref name="filePath"/> is <c>null</c>.</exception>
-            <exception cref="T:System.IO.PathTooLongException">The specified path, file name, or both exceed the system-defined
-            maximum length. For example, on Windows-based platforms, paths must be less than 248 characters,
-            and file names must be less than 260 characters.</exception>
-            <exception cref="T:System.IO.DirectoryNotFoundException">The specified path is invalid, (for example,
-            it is on an unmapped drive).</exception>
-            <exception cref="T:System.IO.IOException">An I/O error occurred while reading the file.</exception>
-            <exception cref="T:System.NotSupportedException"><paramref name="filePath"/> is in an invalid format.</exception>
-            <exception cref="T:System.UnauthorizedAccessException">
-            <para>One of the following errors occurred:</para>
-            <list type="bullet">
-            <item>
-            <description>This operation is not supported on the current platform.</description>
-            </item>
-            <item>
-            <description><paramref name="filePath"/> specified a directory.</description>
-            </item>
-            <item>
-            <description>The caller does not have the required permission.</description>
-            </item>
-            </list>
-            </exception>
-        </member>
-        <member name="M:Melanchall.DryWetMidi.Tools.CsvConverter.ConvertCsvToMidiFile(System.IO.Stream,Melanchall.DryWetMidi.Tools.MidiFileCsvConversionSettings)">
-            <summary>
-            Converts CSV representation of a MIDI file to <see cref="T:Melanchall.DryWetMidi.Core.MidiFile"/> reading CSV data from a stream.
-            </summary>
-            <param name="stream">Stream to read MIDI file from.</param>
-            <param name="settings">Settings according to which CSV data must be converted. Pass <c>null</c> to
-            use default settings.</param>
-            <returns>An instance of the <see cref="T:Melanchall.DryWetMidi.Core.MidiFile"/> representing a MIDI file written in CSV format.</returns>
-            <exception cref="T:System.ArgumentNullException"><paramref name="stream"/> is <c>null</c>.</exception>
-            <exception cref="T:System.ArgumentException"><paramref name="stream"/> doesn't support reading.</exception>
-            <exception cref="T:System.IO.IOException">An I/O error occurred while reading from the stream.</exception>
-            <exception cref="T:System.ObjectDisposedException"><paramref name="stream"/> is disposed.</exception>
-        </member>
-        <member name="M:Melanchall.DryWetMidi.Tools.CsvConverter.ConvertNotesToCsv(System.Collections.Generic.IEnumerable{Melanchall.DryWetMidi.Interaction.Note},System.String,Melanchall.DryWetMidi.Interaction.TempoMap,System.Boolean,Melanchall.DryWetMidi.Tools.NoteCsvConversionSettings)">
-            <summary>
-            Converts the specified collection of <see cref="T:Melanchall.DryWetMidi.Interaction.Note"/> to CSV representation and writes it to a file.
-            </summary>
-            <param name="notes">Collection of <see cref="T:Melanchall.DryWetMidi.Interaction.Note"/> to convert to CSV.</param>
-            <param name="filePath">Path of the output CSV file.</param>
-            <param name="tempoMap">Tempo map used to convert <paramref name="notes"/> to CSV.</param>
+            <param name="midiFile"><see cref="T:Melanchall.DryWetMidi.Core.MidiFile"/> to serialize to CSV representation.</param>
+            <param name="filePath">Path to the file to write the <paramref name="midiFile"/> to.</param>
             <param name="overwriteFile">If <c>true</c> and file specified by <paramref name="filePath"/> already
-            exists it will be overwritten; if <c>false</c> and the file exists, exception will be thrown.</param>
-            <param name="settings">Settings according to which <paramref name="notes"/> must be converted.
-            Pass <c>null</c> to use default settings.</param>
-            <exception cref="T:System.ArgumentNullException">
-            <para>One of the following errors occurred:</para>
-            <list type="bullet">
-            <item>
-            <description><paramref name="notes"/> is <c>null</c>.</description>
-            </item>
-            <item>
-            <description><paramref name="tempoMap"/> is <c>null</c>.</description>
-            </item>
-            </list>
-            </exception>
+            exists it will be overwritten; if <c>false</c> and the file exists exception will be thrown.</param>
+            <param name="settings">Settings according to which <paramref name="midiFile"/> should be serialized.</param>
+            <param name="objectType">Types of objects within track chunks of the <paramref name="midiFile"/>
+            to serialize (see Remarks section).</param>
+            <param name="objectDetectionSettings">Settings according to which objects within track chunks should be
+            detected and built.</param>
+            <remarks>
+            <paramref name="objectType"/> defines what kind of objects to put to the <paramref name="objectType"/>
+            as CSV. For example, if you specify <see cref="F:Melanchall.DryWetMidi.Interaction.ObjectType.TimedEvent"/>, all events within track chunks
+            of the <paramref name="midiFile"/> will be written to the stream. If you specify <see cref="F:Melanchall.DryWetMidi.Interaction.ObjectType.Note"/>,
+            only notes will be written. If you specify <see cref="F:Melanchall.DryWetMidi.Interaction.ObjectType.Note"/> | <see cref="F:Melanchall.DryWetMidi.Interaction.ObjectType.TimedEvent"/>,
+            events and notes will be written. Please see <see href="https://melanchall.github.io/drywetmidi/articles/high-level-managing/Getting-objects.html#getobjects">Getting objects: GetObjects</see>
+            article to learn more.
+            </remarks>
             <exception cref="T:System.ArgumentException"><paramref name="filePath"/> is a zero-length string,
             contains only white space, or contains one or more invalid characters as defined by
             <see cref="F:System.IO.Path.InvalidPathChars"/>.</exception>
-            <exception cref="T:System.ArgumentNullException"><paramref name="filePath"/> is <c>null</c>.</exception>
-            <exception cref="T:System.IO.PathTooLongException">The specified path, file name, or both exceed the system-defined
-            maximum length. For example, on Windows-based platforms, paths must be less than 248 characters,
-            and file names must be less than 260 characters.</exception>
-            <exception cref="T:System.IO.DirectoryNotFoundException">The specified path is invalid, (for example,
-            it is on an unmapped drive).</exception>
-            <exception cref="T:System.IO.IOException">An I/O error occurred while writing the file.</exception>
-            <exception cref="T:System.NotSupportedException"><paramref name="filePath"/> is in an invalid format.</exception>
-            <exception cref="T:System.UnauthorizedAccessException">
-            <para>One of the following errors occurred:</para>
-            <list type="bullet">
-            <item>
-            <description>This operation is not supported on the current platform.</description>
-            </item>
-            <item>
-            <description><paramref name="filePath"/> specified a directory.</description>
-            </item>
-            <item>
-            <description>The caller does not have the required permission.</description>
-            </item>
-            </list>
-            </exception>
+            <exception cref="T:System.ArgumentNullException"><paramref name="midiFile"/> is <c>null</c>.</exception>
         </member>
-        <member name="M:Melanchall.DryWetMidi.Tools.CsvConverter.ConvertNotesToCsv(System.Collections.Generic.IEnumerable{Melanchall.DryWetMidi.Interaction.Note},System.IO.Stream,Melanchall.DryWetMidi.Interaction.TempoMap,Melanchall.DryWetMidi.Tools.NoteCsvConversionSettings)">
+        <member name="M:Melanchall.DryWetMidi.Tools.CsvSerializer.SerializeToCsv(System.Collections.Generic.IEnumerable{Melanchall.DryWetMidi.Core.MidiChunk},System.IO.Stream,Melanchall.DryWetMidi.Interaction.TempoMap,Melanchall.DryWetMidi.Tools.CsvSerializationSettings,Melanchall.DryWetMidi.Interaction.ObjectType,Melanchall.DryWetMidi.Interaction.ObjectDetectionSettings)">
             <summary>
-            Converts the specified collection of <see cref="T:Melanchall.DryWetMidi.Interaction.Note"/> to CSV representation and writes it to a stream.
+            Writes the specified collection of <see cref="T:Melanchall.DryWetMidi.Core.MidiChunk"/> to a stream in CSV format.
             </summary>
-            <param name="notes">Collection of <see cref="T:Melanchall.DryWetMidi.Interaction.Note"/> to convert to CSV.</param>
-            <param name="stream">Stream to write CSV representation to.</param>
-            <param name="tempoMap">Tempo map used to convert <paramref name="notes"/> to CSV.</param>
-            <param name="settings">Settings according to which <paramref name="notes"/> must be converted.
-            Pass <c>null</c> to use default settings.</param>
-            <exception cref="T:System.ArgumentNullException">
-            <para>One of the following errors occurred:</para>
-            <list type="bullet">
-            <item>
-            <description><paramref name="notes"/> is <c>null</c>.</description>
-            </item>
-            <item>
-            <description><paramref name="stream"/> is <c>null</c>.</description>
-            </item>
-            <item>
-            <description><paramref name="tempoMap"/> is <c>null</c>.</description>
-            </item>
-            </list>
-            </exception>
+            <param name="midiChunks">Collection of <see cref="T:Melanchall.DryWetMidi.Core.MidiChunk"/> to serialize to CSV representation.</param>
+            <param name="stream"><see cref="T:System.IO.Stream"/> to write the <paramref name="midiChunks"/> to.</param>
+            <param name="tempoMap"><see cref="T:Melanchall.DryWetMidi.Interaction.TempoMap"/> to use for time/length conversions.</param>
+            <param name="settings">Settings according to which <paramref name="midiChunks"/> should be serialized.</param>
+            <param name="objectType">Types of objects within track chunks of the <paramref name="midiChunks"/>
+            to serialize (see Remarks section).</param>
+            <param name="objectDetectionSettings">Settings according to which objects within track chunks should be
+            detected and built.</param>
+            <remarks>
+            <paramref name="objectType"/> defines what kind of objects to put to the <paramref name="objectType"/>
+            as CSV. For example, if you specify <see cref="F:Melanchall.DryWetMidi.Interaction.ObjectType.TimedEvent"/>, all events within track chunks
+            of the <paramref name="midiChunks"/> will be written to the stream. If you specify <see cref="F:Melanchall.DryWetMidi.Interaction.ObjectType.Note"/>,
+            only notes will be written. If you specify <see cref="F:Melanchall.DryWetMidi.Interaction.ObjectType.Note"/> | <see cref="F:Melanchall.DryWetMidi.Interaction.ObjectType.TimedEvent"/>,
+            events and notes will be written. Please see <see href="https://melanchall.github.io/drywetmidi/articles/high-level-managing/Getting-objects.html#getobjects">Getting objects: GetObjects</see>
+            article to learn more.
+            </remarks>
             <exception cref="T:System.ArgumentException"><paramref name="stream"/> doesn't support writing.</exception>
-            <exception cref="T:System.IO.IOException">An I/O error occurred while writing to the stream.</exception>
-            <exception cref="T:System.ObjectDisposedException"><paramref name="stream"/> is disposed.</exception>
-        </member>
-        <member name="M:Melanchall.DryWetMidi.Tools.CsvConverter.ConvertCsvToNotes(System.String,Melanchall.DryWetMidi.Interaction.TempoMap,Melanchall.DryWetMidi.Tools.NoteCsvConversionSettings)">
-            <summary>
-            Converts CSV representation of notes to collection of <see cref="T:Melanchall.DryWetMidi.Interaction.Note"/> reading CSV data from a file.
-            </summary>
-            <param name="filePath">Path of the file with CSV representation of notes.</param>
-            <param name="tempoMap">Tempo map used to convert notes from CSV.</param>
-            <param name="settings">Settings according to which CSV data must be converted. Pass <c>null</c> to
-            use default settings.</param>
-            <returns>Collection of <see cref="T:Melanchall.DryWetMidi.Interaction.Note"/> representing notes written in CSV format.</returns>
-            <exception cref="T:System.ArgumentException"><paramref name="filePath"/> is a zero-length string,
-            contains only white space, or contains one or more invalid characters as defined by
-            <see cref="F:System.IO.Path.InvalidPathChars"/>.</exception>
             <exception cref="T:System.ArgumentNullException">
             <para>One of the following errors occurred:</para>
             <list type="bullet">
             <item>
-            <description><paramref name="filePath"/> is <c>null</c>.</description>
+            <description><paramref name="midiChunks"/> is <c>null</c>.</description>
             </item>
-            <item>
-            <description><paramref name="tempoMap"/> is <c>null</c>.</description>
-            </item>
-            </list>
-            </exception>
-            <exception cref="T:System.IO.PathTooLongException">The specified path, file name, or both exceed the system-defined
-            maximum length. For example, on Windows-based platforms, paths must be less than 248 characters,
-            and file names must be less than 260 characters.</exception>
-            <exception cref="T:System.IO.DirectoryNotFoundException">The specified path is invalid, (for example,
-            it is on an unmapped drive).</exception>
-            <exception cref="T:System.IO.IOException">An I/O error occurred while reading the file.</exception>
-            <exception cref="T:System.NotSupportedException"><paramref name="filePath"/> is in an invalid format.</exception>
-            <exception cref="T:System.UnauthorizedAccessException">
-            <para>One of the following errors occurred:</para>
-            <list type="bullet">
-            <item>
-            <description>This operation is not supported on the current platform.</description>
-            </item>
-            <item>
-            <description><paramref name="filePath"/> specified a directory.</description>
-            </item>
-            <item>
-            <description>The caller does not have the required permission.</description>
-            </item>
-            </list>
-            </exception>
-        </member>
-        <member name="M:Melanchall.DryWetMidi.Tools.CsvConverter.ConvertCsvToNotes(System.IO.Stream,Melanchall.DryWetMidi.Interaction.TempoMap,Melanchall.DryWetMidi.Tools.NoteCsvConversionSettings)">
-            <summary>
-            Converts CSV representation of notes to collection of <see cref="T:Melanchall.DryWetMidi.Core.MidiFile"/> reading CSV data from a stream.
-            </summary>
-            <param name="stream">Stream to read notes from.</param>
-            <param name="tempoMap">Tempo map used to convert notes from CSV.</param>
-            <param name="settings">Settings according to which CSV data must be converted. Pass <c>null</c> to
-            use default settings.</param>
-            <returns>Collection of <see cref="T:Melanchall.DryWetMidi.Interaction.Note"/> representing notes written in CSV format.</returns>
-            <exception cref="T:System.ArgumentNullException">
-            <para>One of the following errors occurred:</para>
-            <list type="bullet">
             <item>
             <description><paramref name="stream"/> is <c>null</c>.</description>
             </item>
@@ -31654,143 +31709,248 @@
             </item>
             </list>
             </exception>
-            <exception cref="T:System.ArgumentException"><paramref name="stream"/> doesn't support reading.</exception>
-            <exception cref="T:System.IO.IOException">An I/O error occurred while reading from the stream.</exception>
-            <exception cref="T:System.ObjectDisposedException"><paramref name="stream"/> is disposed.</exception>
         </member>
-        <member name="T:Melanchall.DryWetMidi.Tools.MidiFileCsvConversionSettings">
+        <member name="M:Melanchall.DryWetMidi.Tools.CsvSerializer.SerializeToCsv(System.Collections.Generic.IEnumerable{Melanchall.DryWetMidi.Core.MidiChunk},System.String,System.Boolean,Melanchall.DryWetMidi.Interaction.TempoMap,Melanchall.DryWetMidi.Tools.CsvSerializationSettings,Melanchall.DryWetMidi.Interaction.ObjectType,Melanchall.DryWetMidi.Interaction.ObjectDetectionSettings)">
             <summary>
-            Settings according to which <see cref="T:Melanchall.DryWetMidi.Core.MidiFile"/> must be read from or written to
-            CSV representation.
+            Writes the specified collection of <see cref="T:Melanchall.DryWetMidi.Core.MidiChunk"/> to a file in CSV format.
             </summary>
-        </member>
-        <member name="P:Melanchall.DryWetMidi.Tools.MidiFileCsvConversionSettings.CsvLayout">
-            <summary>
-            Gets or sets layout of CSV representation of <see cref="T:Melanchall.DryWetMidi.Core.MidiFile"/>. The default value is
-            <see cref="F:Melanchall.DryWetMidi.Tools.MidiFileCsvLayout.DryWetMidi"/>.
-            </summary>
+            <param name="midiChunks">Collection of <see cref="T:Melanchall.DryWetMidi.Core.MidiChunk"/> to serialize to CSV representation.</param>
+            <param name="filePath">Path to the file to write the <paramref name="midiChunks"/> to.</param>
+            <param name="overwriteFile">If <c>true</c> and file specified by <paramref name="filePath"/> already
+            exists it will be overwritten; if <c>false</c> and the file exists exception will be thrown.</param>
+            <param name="tempoMap"><see cref="T:Melanchall.DryWetMidi.Interaction.TempoMap"/> to use for time/length conversions.</param>
+            <param name="settings">Settings according to which <paramref name="midiChunks"/> should be serialized.</param>
+            <param name="objectType">Types of objects within track chunks of the <paramref name="midiChunks"/>
+            to serialize (see Remarks section).</param>
+            <param name="objectDetectionSettings">Settings according to which objects within track chunks should be
+            detected and built.</param>
             <remarks>
-            At now there are two layouts: <see cref="F:Melanchall.DryWetMidi.Tools.MidiFileCsvLayout.DryWetMidi"/> and
-            <see cref="F:Melanchall.DryWetMidi.Tools.MidiFileCsvLayout.MidiCsv"/> which produces slightly different CSV representations.
-            The default value is <see cref="F:Melanchall.DryWetMidi.Tools.MidiFileCsvLayout.DryWetMidi"/> that gives more compact and more
-            human readable CSV data.
+            <paramref name="objectType"/> defines what kind of objects to put to the <paramref name="objectType"/>
+            as CSV. For example, if you specify <see cref="F:Melanchall.DryWetMidi.Interaction.ObjectType.TimedEvent"/>, all events within track chunks
+            of the <paramref name="midiChunks"/> will be written to the stream. If you specify <see cref="F:Melanchall.DryWetMidi.Interaction.ObjectType.Note"/>,
+            only notes will be written. If you specify <see cref="F:Melanchall.DryWetMidi.Interaction.ObjectType.Note"/> | <see cref="F:Melanchall.DryWetMidi.Interaction.ObjectType.TimedEvent"/>,
+            events and notes will be written. Please see <see href="https://melanchall.github.io/drywetmidi/articles/high-level-managing/Getting-objects.html#getobjects">Getting objects: GetObjects</see>
+            article to learn more.
             </remarks>
-            <exception cref="T:System.ComponentModel.InvalidEnumArgumentException"><paramref name="value"/> specified an invalid value.</exception>
+            <exception cref="T:System.ArgumentException"><paramref name="filePath"/> is a zero-length string,
+            contains only white space, or contains one or more invalid characters as defined by
+            <see cref="F:System.IO.Path.InvalidPathChars"/>.</exception>
+            <exception cref="T:System.ArgumentNullException">
+            <para>One of the following errors occurred:</para>
+            <list type="bullet">
+            <item>
+            <description><paramref name="midiChunks"/> is <c>null</c>.</description>
+            </item>
+            <item>
+            <description><paramref name="tempoMap"/> is <c>null</c>.</description>
+            </item>
+            </list>
+            </exception>
         </member>
-        <member name="P:Melanchall.DryWetMidi.Tools.MidiFileCsvConversionSettings.TimeType">
+        <member name="M:Melanchall.DryWetMidi.Tools.CsvSerializer.SerializeToCsv(Melanchall.DryWetMidi.Core.MidiChunk,System.IO.Stream,Melanchall.DryWetMidi.Interaction.TempoMap,Melanchall.DryWetMidi.Tools.CsvSerializationSettings,Melanchall.DryWetMidi.Interaction.ObjectType,Melanchall.DryWetMidi.Interaction.ObjectDetectionSettings)">
             <summary>
-            Gets or sets format of timestamps inside CSV representation. The default value is <see cref="F:Melanchall.DryWetMidi.Interaction.TimeSpanType.Midi"/>
+            Writes the specified <see cref="T:Melanchall.DryWetMidi.Core.MidiChunk"/> to a stream in CSV format.
             </summary>
+            <param name="midiChunk"><see cref="T:Melanchall.DryWetMidi.Core.MidiChunk"/> to serialize to CSV representation.</param>
+            <param name="stream"><see cref="T:System.IO.Stream"/> to write the <paramref name="midiChunk"/> to.</param>
+            <param name="tempoMap"><see cref="T:Melanchall.DryWetMidi.Interaction.TempoMap"/> to use for time/length conversions.</param>
+            <param name="settings">Settings according to which <paramref name="midiChunk"/> should be serialized.</param>
+            <param name="objectType">Types of objects within <paramref name="midiChunk"/> to serialize
+            if it's a track chunk (see Remarks section).</param>
+            <param name="objectDetectionSettings">Settings according to which objects within a track chunk should be
+            detected and built.</param>
             <remarks>
-            Note that it is recommended to use <see cref="F:Melanchall.DryWetMidi.Interaction.TimeSpanType.Midi"/> if you use
-            <see cref="F:Melanchall.DryWetMidi.Tools.MidiFileCsvLayout.MidiCsv"/> CSV layout to ensure produced CSV data can be read
-            by other readers that supports format used by midicsv (http://www.fourmilab.ch/webtools/midicsv/) program.
+            <paramref name="objectType"/> defines what kind of objects to put to the <paramref name="objectType"/>
+            as CSV. For example, if you specify <see cref="F:Melanchall.DryWetMidi.Interaction.ObjectType.TimedEvent"/>, all events within <paramref name="midiChunk"/>
+            will be written to the stream if it's a track chunk. If you specify <see cref="F:Melanchall.DryWetMidi.Interaction.ObjectType.Note"/>,
+            only notes will be written. If you specify <see cref="F:Melanchall.DryWetMidi.Interaction.ObjectType.Note"/> | <see cref="F:Melanchall.DryWetMidi.Interaction.ObjectType.TimedEvent"/>,
+            events and notes will be written. Please see <see href="https://melanchall.github.io/drywetmidi/articles/high-level-managing/Getting-objects.html#getobjects">Getting objects: GetObjects</see>
+            article to learn more.
             </remarks>
-            <exception cref="T:System.ComponentModel.InvalidEnumArgumentException"><paramref name="value"/> specified an invalid value.</exception>
+            <exception cref="T:System.ArgumentException"><paramref name="stream"/> doesn't support writing.</exception>
+            <exception cref="T:System.ArgumentNullException">
+            <para>One of the following errors occurred:</para>
+            <list type="bullet">
+            <item>
+            <description><paramref name="midiChunk"/> is <c>null</c>.</description>
+            </item>
+            <item>
+            <description><paramref name="stream"/> is <c>null</c>.</description>
+            </item>
+            <item>
+            <description><paramref name="tempoMap"/> is <c>null</c>.</description>
+            </item>
+            </list>
+            </exception>
         </member>
-        <member name="P:Melanchall.DryWetMidi.Tools.MidiFileCsvConversionSettings.NoteLengthType">
+        <member name="M:Melanchall.DryWetMidi.Tools.CsvSerializer.SerializeToCsv(Melanchall.DryWetMidi.Core.MidiChunk,System.String,System.Boolean,Melanchall.DryWetMidi.Interaction.TempoMap,Melanchall.DryWetMidi.Tools.CsvSerializationSettings,Melanchall.DryWetMidi.Interaction.ObjectType,Melanchall.DryWetMidi.Interaction.ObjectDetectionSettings)">
             <summary>
-            Gets or sets the type of a note length (metric, bar/beat and so on) which should be used to
-            write to or read from CSV. The default value is <see cref="F:Melanchall.DryWetMidi.Interaction.TimeSpanType.Midi"/>.
+            Writes the specified <see cref="T:Melanchall.DryWetMidi.Core.MidiChunk"/> to a file in CSV format.
+            </summary>
+            <param name="midiChunk"><see cref="T:Melanchall.DryWetMidi.Core.MidiChunk"/> to serialize to CSV representation.</param>
+            <param name="filePath">Path to the file to write the <paramref name="midiChunk"/> to.</param>
+            <param name="overwriteFile">If <c>true</c> and file specified by <paramref name="filePath"/> already
+            exists it will be overwritten; if <c>false</c> and the file exists exception will be thrown.</param>
+            <param name="tempoMap"><see cref="T:Melanchall.DryWetMidi.Interaction.TempoMap"/> to use for time/length conversions.</param>
+            <param name="settings">Settings according to which <paramref name="midiChunk"/> should be serialized.</param>
+            <param name="objectType">Types of objects within <paramref name="midiChunk"/> to serialize
+            if it's a track chunk (see Remarks section).</param>
+            <param name="objectDetectionSettings">Settings according to which objects within a track chunk should be
+            detected and built.</param>
+            <remarks>
+            <paramref name="objectType"/> defines what kind of objects to put to the <paramref name="objectType"/>
+            as CSV. For example, if you specify <see cref="F:Melanchall.DryWetMidi.Interaction.ObjectType.TimedEvent"/>, all events within <paramref name="midiChunk"/>
+            will be written to the stream if it's a track chunk. If you specify <see cref="F:Melanchall.DryWetMidi.Interaction.ObjectType.Note"/>,
+            only notes will be written. If you specify <see cref="F:Melanchall.DryWetMidi.Interaction.ObjectType.Note"/> | <see cref="F:Melanchall.DryWetMidi.Interaction.ObjectType.TimedEvent"/>,
+            events and notes will be written. Please see <see href="https://melanchall.github.io/drywetmidi/articles/high-level-managing/Getting-objects.html#getobjects">Getting objects: GetObjects</see>
+            article to learn more.
+            </remarks>
+            <exception cref="T:System.ArgumentException"><paramref name="filePath"/> is a zero-length string,
+            contains only white space, or contains one or more invalid characters as defined by
+            <see cref="F:System.IO.Path.InvalidPathChars"/>.</exception>
+            <exception cref="T:System.ArgumentNullException">
+            <para>One of the following errors occurred:</para>
+            <list type="bullet">
+            <item>
+            <description><paramref name="midiChunk"/> is <c>null</c>.</description>
+            </item>
+            <item>
+            <description><paramref name="tempoMap"/> is <c>null</c>.</description>
+            </item>
+            </list>
+            </exception>
+        </member>
+        <member name="M:Melanchall.DryWetMidi.Tools.CsvSerializer.SerializeToCsv(System.Collections.Generic.IEnumerable{Melanchall.DryWetMidi.Interaction.ITimedObject},System.IO.Stream,Melanchall.DryWetMidi.Interaction.TempoMap,Melanchall.DryWetMidi.Tools.CsvSerializationSettings)">
+            <summary>
+            Writes the specified objects to a stream in CSV format.
+            </summary>
+            <param name="timedObjects">Collection of <see cref="T:Melanchall.DryWetMidi.Interaction.ITimedObject"/> to serialize to CSV representation.</param>
+            <param name="stream"><see cref="T:System.IO.Stream"/> to write the <paramref name="timedObjects"/> to.</param>
+            <param name="tempoMap"><see cref="T:Melanchall.DryWetMidi.Interaction.TempoMap"/> to use for time/length conversions.</param>
+            <param name="settings">Settings according to which <paramref name="timedObjects"/> should be serialized.</param>
+            <exception cref="T:System.ArgumentException"><paramref name="stream"/> doesn't support writing.</exception>
+            <exception cref="T:System.ArgumentNullException">
+            <para>One of the following errors occurred:</para>
+            <list type="bullet">
+            <item>
+            <description><paramref name="timedObjects"/> is <c>null</c>.</description>
+            </item>
+            <item>
+            <description><paramref name="stream"/> is <c>null</c>.</description>
+            </item>
+            <item>
+            <description><paramref name="tempoMap"/> is <c>null</c>.</description>
+            </item>
+            </list>
+            </exception>
+        </member>
+        <member name="M:Melanchall.DryWetMidi.Tools.CsvSerializer.SerializeToCsv(System.Collections.Generic.IEnumerable{Melanchall.DryWetMidi.Interaction.ITimedObject},System.String,System.Boolean,Melanchall.DryWetMidi.Interaction.TempoMap,Melanchall.DryWetMidi.Tools.CsvSerializationSettings)">
+            <summary>
+            Writes the specified objects to a file in CSV format.
+            </summary>
+            <param name="timedObjects">Collection of <see cref="T:Melanchall.DryWetMidi.Interaction.ITimedObject"/> to serialize to CSV representation.</param>
+            <param name="filePath">Path to the file to write the <paramref name="timedObjects"/> to.</param>
+            <param name="overwriteFile">If <c>true</c> and file specified by <paramref name="filePath"/> already
+            exists it will be overwritten; if <c>false</c> and the file exists exception will be thrown.</param>
+            <param name="tempoMap"><see cref="T:Melanchall.DryWetMidi.Interaction.TempoMap"/> to use for time/length conversions.</param>
+            <param name="settings">Settings according to which <paramref name="timedObjects"/> should be serialized.</param>
+            <exception cref="T:System.ArgumentException"><paramref name="filePath"/> is a zero-length string,
+            contains only white space, or contains one or more invalid characters as defined by
+            <see cref="F:System.IO.Path.InvalidPathChars"/>.</exception>
+            <exception cref="T:System.ArgumentNullException">
+            <para>One of the following errors occurred:</para>
+            <list type="bullet">
+            <item>
+            <description><paramref name="timedObjects"/> is <c>null</c>.</description>
+            </item>
+            <item>
+            <description><paramref name="tempoMap"/> is <c>null</c>.</description>
+            </item>
+            </list>
+            </exception>
+        </member>
+        <member name="T:Melanchall.DryWetMidi.Tools.CsvBytesArrayFormat">
+            <summary>
+            Defines how bytes arrays (for example, <see cref="P:Melanchall.DryWetMidi.Core.SequencerSpecificEvent.Data"/>) should be
+            presented in CSV. The default value is <see cref="F:Melanchall.DryWetMidi.Tools.CsvBytesArrayFormat.Decimal"/>.
+            </summary>
+        </member>
+        <member name="F:Melanchall.DryWetMidi.Tools.CsvBytesArrayFormat.Decimal">
+            <summary>
+            Bytes should be presented in decimal format. For example, <c>"10 0 123 5"</c>.
+            </summary>
+        </member>
+        <member name="F:Melanchall.DryWetMidi.Tools.CsvBytesArrayFormat.Hexadecimal">
+            <summary>
+            Bytes should be presented in hexadecimal format. For example, <c>"0A 00 7B 05"</c>.
+            Note that each value will be in upper case and will have two digits.
+            </summary>
+        </member>
+        <member name="T:Melanchall.DryWetMidi.Tools.CsvNoteFormat">
+            <summary>
+            Defines how note numbers (for example, <see cref="P:Melanchall.DryWetMidi.Core.NoteAftertouchEvent.NoteNumber"/>) should be
+            presented in CSV. The default value is <see cref="F:Melanchall.DryWetMidi.Tools.CsvNoteFormat.NoteNumber"/>.
+            </summary>
+        </member>
+        <member name="F:Melanchall.DryWetMidi.Tools.CsvNoteFormat.NoteNumber">
+            <summary>
+            A note number should be presented as just a number. For example, <c>60</c>.
+            </summary>
+        </member>
+        <member name="F:Melanchall.DryWetMidi.Tools.CsvNoteFormat.Letter">
+            <summary>
+            A note number should be presented as a letter including accidental and octave number.
+            For example, <c>C4</c>.
+            </summary>
+        </member>
+        <member name="T:Melanchall.DryWetMidi.Tools.CsvSerializationSettings">
+            <summary>
+            Privides settings that control the process of CSV serialization/deserialization.
+            </summary>
+            <seealso cref="T:Melanchall.DryWetMidi.Tools.CsvSerializer"/>
+        </member>
+        <member name="P:Melanchall.DryWetMidi.Tools.CsvSerializationSettings.TimeType">
+            <summary>
+            Gets or sets a value that defines how the time of objects should be presented in CSV.
+            The default value is <see cref="F:Melanchall.DryWetMidi.Interaction.TimeSpanType.Midi"/>. More info on the supported
+            formats in the <see href="https://melanchall.github.io/drywetmidi/articles/high-level-managing/Time-and-length.html">Time and length</see> article.
             </summary>
             <exception cref="T:System.ComponentModel.InvalidEnumArgumentException"><paramref name="value"/> specified an invalid value.</exception>
         </member>
-        <member name="P:Melanchall.DryWetMidi.Tools.MidiFileCsvConversionSettings.NoteFormat">
+        <member name="P:Melanchall.DryWetMidi.Tools.CsvSerializationSettings.LengthType">
             <summary>
-            Gets or sets the format which should be used to write notes to or read them from CSV.
-            The default value is <see cref="F:Melanchall.DryWetMidi.Tools.NoteFormat.Events"/>.
+            Gets or sets a value that defines how length of notes should be presented in CSV.
+            The default value is <see cref="F:Melanchall.DryWetMidi.Interaction.TimeSpanType.Midi"/>. More info on the supported
+            formats in the <see href="https://melanchall.github.io/drywetmidi/articles/high-level-managing/Time-and-length.html">Time and length</see> article.
             </summary>
             <exception cref="T:System.ComponentModel.InvalidEnumArgumentException"><paramref name="value"/> specified an invalid value.</exception>
         </member>
-        <member name="P:Melanchall.DryWetMidi.Tools.MidiFileCsvConversionSettings.NoteNumberFormat">
+        <member name="P:Melanchall.DryWetMidi.Tools.CsvSerializationSettings.NoteFormat">
             <summary>
-            Gets or sets the format which should be used to write a note's number to or read it from CSV.
-            The default value is <see cref="F:Melanchall.DryWetMidi.Tools.NoteNumberFormat.NoteNumber"/>.
+            Gets or sets a value that defines how note numbers (for example, <see cref="P:Melanchall.DryWetMidi.Core.NoteAftertouchEvent.NoteNumber"/>)
+            should be presented in CSV. The default value is <see cref="F:Melanchall.DryWetMidi.Tools.CsvNoteFormat.NoteNumber"/>.
             </summary>
             <exception cref="T:System.ComponentModel.InvalidEnumArgumentException"><paramref name="value"/> specified an invalid value.</exception>
         </member>
-        <member name="P:Melanchall.DryWetMidi.Tools.MidiFileCsvConversionSettings.CsvSettings">
+        <member name="P:Melanchall.DryWetMidi.Tools.CsvSerializationSettings.BytesArrayFormat">
             <summary>
-            Gets common CSV settings.
-            </summary>
-        </member>
-        <member name="T:Melanchall.DryWetMidi.Tools.MidiFileCsvLayout">
-            <summary>
-            Layout (format) of CSV data representing a MIDI file. The default value is <see cref="F:Melanchall.DryWetMidi.Tools.MidiFileCsvLayout.DryWetMidi"/>.
-            </summary>
-        </member>
-        <member name="F:Melanchall.DryWetMidi.Tools.MidiFileCsvLayout.DryWetMidi">
-            <summary>
-            Format used by DryWetMIDI which gives more compact and human readable CSV
-            representation.
-            </summary>
-        </member>
-        <member name="F:Melanchall.DryWetMidi.Tools.MidiFileCsvLayout.MidiCsv">
-            <summary>
-            Format used by midicsv (http://www.fourmilab.ch/webtools/midicsv/) program.
-            </summary>
-        </member>
-        <member name="T:Melanchall.DryWetMidi.Tools.NoteFormat">
-            <summary>
-            The format which should be used to write notes to or read them from CSV.
-            </summary>
-        </member>
-        <member name="F:Melanchall.DryWetMidi.Tools.NoteFormat.Note">
-            <summary>
-            Notes are presented in CSV as note objects.
-            </summary>
-        </member>
-        <member name="F:Melanchall.DryWetMidi.Tools.NoteFormat.Events">
-            <summary>
-            Notes are presented in CSV as Note On/Note Off events.
-            </summary>
-        </member>
-        <member name="T:Melanchall.DryWetMidi.Tools.NoteCsvConversionSettings">
-            <summary>
-            Settings according to which instances of the <see cref="T:Melanchall.DryWetMidi.Interaction.Note"/> must be read from or written to
-            CSV representation.
-            </summary>
-        </member>
-        <member name="P:Melanchall.DryWetMidi.Tools.NoteCsvConversionSettings.TimeType">
-            <summary>
-            Gets or sets format of timestamps inside CSV representation. The default value is <see cref="F:Melanchall.DryWetMidi.Interaction.TimeSpanType.Midi"/>
+            Gets or sets a value that defines how bytes arrays (for example, <see cref="P:Melanchall.DryWetMidi.Core.SequencerSpecificEvent.Data"/>)
+            should be presented in CSV. The default value is <see cref="F:Melanchall.DryWetMidi.Tools.CsvBytesArrayFormat.Decimal"/>.
             </summary>
             <exception cref="T:System.ComponentModel.InvalidEnumArgumentException"><paramref name="value"/> specified an invalid value.</exception>
         </member>
-        <member name="P:Melanchall.DryWetMidi.Tools.NoteCsvConversionSettings.NoteLengthType">
+        <member name="P:Melanchall.DryWetMidi.Tools.CsvSerializationSettings.Delimiter">
             <summary>
-            Gets or sets the type of a note length (metric, bar/beat and so on) which should be used to
-            write to or read from CSV. The default value is <see cref="F:Melanchall.DryWetMidi.Interaction.TimeSpanType.Midi"/>.
-            </summary>
-            <exception cref="T:System.ComponentModel.InvalidEnumArgumentException"><paramref name="value"/> specified an invalid value.</exception>
-        </member>
-        <member name="P:Melanchall.DryWetMidi.Tools.NoteCsvConversionSettings.NoteNumberFormat">
-            <summary>
-            Gets or sets the format which should be used to write a note's number to or read it from CSV.
-            The default value is <see cref="F:Melanchall.DryWetMidi.Tools.NoteNumberFormat.NoteNumber"/>.
-            </summary>
-            <exception cref="T:System.ComponentModel.InvalidEnumArgumentException"><paramref name="value"/> specified an invalid value.</exception>
-        </member>
-        <member name="P:Melanchall.DryWetMidi.Tools.NoteCsvConversionSettings.CsvSettings">
-            <summary>
-            Gets common CSV settings.
+            Gets or sets a char used as the values delimiter in CSV records. The default value
+            is comma (<c>','</c>).
             </summary>
         </member>
-        <member name="T:Melanchall.DryWetMidi.Tools.NoteNumberFormat">
+        <member name="P:Melanchall.DryWetMidi.Tools.CsvSerializationSettings.ReadWriteBufferSize">
             <summary>
-            Defines how a note's number is presented in CSV representation: either a number or
-            a letter (for example, A#5).
+            Gets or sets the size in bytes of the internal buffer for reading/writing data within
+            the process of CSV serialization/deserialization. The default value is <c>1024</c>.
             </summary>
-        </member>
-        <member name="F:Melanchall.DryWetMidi.Tools.NoteNumberFormat.NoteNumber">
-            <summary>
-            A note's number is presented as just a number.
-            </summary>
-        </member>
-        <member name="F:Melanchall.DryWetMidi.Tools.NoteNumberFormat.Letter">
-            <summary>
-            A note's number is presented as a letter.
-            </summary>
+            <exception cref="T:System.ArgumentOutOfRangeException"><paramref name="value"/> is zero or negative.</exception>
         </member>
         <member name="T:Melanchall.DryWetMidi.Tools.Merger">
             <summary>
@@ -32727,7 +32887,7 @@
             <returns>A new instance of the <see cref="T:Melanchall.DryWetMidi.Core.MidiFile"/> which is the <paramref name="midiFile"/>
             repeated <paramref name="repeatsNumber"/> times using <paramref name="settings"/>.</returns>
             <exception cref="T:System.ArgumentNullException"><paramref name="midiFile"/> is <c>null</c>.</exception>
-            <exception cref="T:System.ArgumentOutOfRangeException"><paramref name="repeatsNumber"/> is zero or negative.</exception>
+            <exception cref="T:System.ArgumentOutOfRangeException"><paramref name="repeatsNumber"/> is negative.</exception>
             <exception cref="T:System.ArgumentException"><see cref="P:Melanchall.DryWetMidi.Tools.RepeatingSettings.Shift"/> of the <paramref name="settings"/>
             is <c>null</c> for fixed-value shift.</exception>
         </member>
@@ -32752,7 +32912,7 @@
             </item>
             </list>
             </exception>
-            <exception cref="T:System.ArgumentOutOfRangeException"><paramref name="repeatsNumber"/> is zero or negative.</exception>
+            <exception cref="T:System.ArgumentOutOfRangeException"><paramref name="repeatsNumber"/> is negative.</exception>
             <exception cref="T:System.ArgumentException"><see cref="P:Melanchall.DryWetMidi.Tools.RepeatingSettings.Shift"/> of the <paramref name="settings"/>
             is <c>null</c> for fixed-value shift.</exception>
         </member>
@@ -32777,7 +32937,7 @@
             </item>
             </list>
             </exception>
-            <exception cref="T:System.ArgumentOutOfRangeException"><paramref name="repeatsNumber"/> is zero or negative.</exception>
+            <exception cref="T:System.ArgumentOutOfRangeException"><paramref name="repeatsNumber"/> is negative.</exception>
             <exception cref="T:System.ArgumentException"><see cref="P:Melanchall.DryWetMidi.Tools.RepeatingSettings.Shift"/> of the <paramref name="settings"/>
             is <c>null</c> for fixed-value shift.</exception>
         </member>
@@ -32802,7 +32962,7 @@
             </item>
             </list>
             </exception>
-            <exception cref="T:System.ArgumentOutOfRangeException"><paramref name="repeatsNumber"/> is zero or negative.</exception>
+            <exception cref="T:System.ArgumentOutOfRangeException"><paramref name="repeatsNumber"/> is negative.</exception>
             <exception cref="T:System.ArgumentException"><see cref="P:Melanchall.DryWetMidi.Tools.RepeatingSettings.Shift"/> of the <paramref name="settings"/>
             is <c>null</c> for fixed-value shift.</exception>
         </member>
@@ -32833,7 +32993,7 @@
             <returns>A new instance of the <see cref="T:Melanchall.DryWetMidi.Core.MidiFile"/> which is the <paramref name="midiFile"/>
             repeated <paramref name="repeatsNumber"/> times using <paramref name="settings"/>.</returns>
             <exception cref="T:System.ArgumentNullException"><paramref name="midiFile"/> is <c>null</c>.</exception>
-            <exception cref="T:System.ArgumentOutOfRangeException"><paramref name="repeatsNumber"/> is zero or negative.</exception>
+            <exception cref="T:System.ArgumentOutOfRangeException"><paramref name="repeatsNumber"/> is negative.</exception>
             <exception cref="T:System.ArgumentException"><see cref="P:Melanchall.DryWetMidi.Tools.RepeatingSettings.Shift"/> of the <paramref name="settings"/>
             is <c>null</c> for fixed-value shift.</exception>
         </member>
@@ -32859,7 +33019,7 @@
             </item>
             </list>
             </exception>
-            <exception cref="T:System.ArgumentOutOfRangeException"><paramref name="repeatsNumber"/> is zero or negative.</exception>
+            <exception cref="T:System.ArgumentOutOfRangeException"><paramref name="repeatsNumber"/> is negative.</exception>
             <exception cref="T:System.ArgumentException"><see cref="P:Melanchall.DryWetMidi.Tools.RepeatingSettings.Shift"/> of the <paramref name="settings"/>
             is <c>null</c> for fixed-value shift.</exception>
         </member>
@@ -32885,7 +33045,7 @@
             </item>
             </list>
             </exception>
-            <exception cref="T:System.ArgumentOutOfRangeException"><paramref name="repeatsNumber"/> is zero or negative.</exception>
+            <exception cref="T:System.ArgumentOutOfRangeException"><paramref name="repeatsNumber"/> is negative.</exception>
             <exception cref="T:System.ArgumentException"><see cref="P:Melanchall.DryWetMidi.Tools.RepeatingSettings.Shift"/> of the <paramref name="settings"/>
             is <c>null</c> for fixed-value shift.</exception>
         </member>
@@ -32911,7 +33071,7 @@
             </item>
             </list>
             </exception>
-            <exception cref="T:System.ArgumentOutOfRangeException"><paramref name="repeatsNumber"/> is zero or negative.</exception>
+            <exception cref="T:System.ArgumentOutOfRangeException"><paramref name="repeatsNumber"/> is negative.</exception>
             <exception cref="T:System.ArgumentException"><see cref="P:Melanchall.DryWetMidi.Tools.RepeatingSettings.Shift"/> of the <paramref name="settings"/>
             is <c>null</c> for fixed-value shift.</exception>
         </member>
@@ -33227,6 +33387,13 @@
             Gets or sets a value indicating whether events on unused channels should be removed or not.
             Unused channel means there are no notes on this channel. The default value is <c>true</c>.
             More info in the <see href="https://melanchall.github.io/drywetmidi/articles/tools/Sanitizer.html#removeeventsonunusedchannels">Sanitizer: RemoveEventsOnUnusedChannels</see> article.
+            </summary>
+        </member>
+        <member name="P:Melanchall.DryWetMidi.Tools.SanitizingSettings.Trim">
+            <summary>
+            Gets or sets a value indicating whether a silence at the start of a MIDI file should be
+            removed or not. The default value is <c>true</c>. More info in the
+            <see href="https://melanchall.github.io/drywetmidi/articles/tools/Sanitizer.html#trim">Sanitizer: Trim</see> article.
             </summary>
         </member>
         <member name="T:Melanchall.DryWetMidi.Tools.SliceMidiFileSettings">

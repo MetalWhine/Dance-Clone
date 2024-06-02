@@ -15,7 +15,7 @@ public class SongSelectDropdownScript : MonoBehaviour
     {
         switch (index)
         {
-            case 0: OnChangeSong.Raise(this, "OdoScene"); break;
+            case 0: OnChangeSong.Raise(this, "Odo Scene"); break;
             case 1: OnChangeSong.Raise(this, "SomethingElse"); break;
             case 2: OnChangeSong.Raise(this, "SomethingElse"); break;
             case 3: OnChangeSong.Raise(this, "SomethingElse"); break;
