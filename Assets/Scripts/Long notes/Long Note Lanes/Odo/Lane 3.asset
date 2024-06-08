@@ -17,5 +17,5 @@ MonoBehaviour:
     length: 5
   - startTime: 30
     length: 5
-  songStartTime: 2
-  moveSpeed: 5
+  songStartTime: 0
+  moveSpeed: 7.5

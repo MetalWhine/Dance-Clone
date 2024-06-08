@@ -102,7 +102,7 @@ public class LongNote : MonoBehaviour
     {
         _isHeld = false;
 
-        int i = ((int)Mathf.Round(_score)+1) * 100;
+        int i = (int)Mathf.Round(_score)+1 * 100;
         hitEvent.Raise(this, i);
 
         Destroy(this.gameObject);

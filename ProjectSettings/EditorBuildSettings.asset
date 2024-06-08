@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Scenes/CLICK HERE/Menu Scene.unity
     guid: a9944332323eee849bd2a200fc1c648a
   - enabled: 1
-    path: Assets/Scenes/CLICK HERE/Odo Scene - Medium.unity
+    path: Assets/Scenes/CLICK HERE/Death By Glamour - Medium.unity
     guid: 210328831f3dcdb4ea6318477a543f2e
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: bfa1182bd221b4ca89619141f66f1260, type: 2}

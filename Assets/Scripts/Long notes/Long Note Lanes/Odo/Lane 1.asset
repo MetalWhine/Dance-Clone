@@ -15,5 +15,5 @@ MonoBehaviour:
   notes:
   - startTime: 5
     length: 6
-  songStartTime: 2
-  moveSpeed: 5
+  songStartTime: 0
+  moveSpeed: 7.5
