@@ -8,7 +8,7 @@ public class SongSelectDropdownScript : MonoBehaviour
 
     private void Awake()
     {
-        OnChangeSong.Raise(this, "Odo Scene");
+        OnChangeSong.Raise(this, "EZ");
     }
 
     public void ChangeLevel(int index)
