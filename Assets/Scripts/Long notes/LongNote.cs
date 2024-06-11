@@ -39,7 +39,7 @@ public class LongNote : MonoBehaviour
         // Move during time
         if(Time.time >= _startTime)
         {
-            transform.localPosition += transform.forward * _moveSpeed * Time.deltaTime; // Move forward
+            transform.position += transform.forward * _moveSpeed * Time.deltaTime; // Move forward
             if (!transformed)
             {
                 lengthenNote();
@@ -102,7 +102,7 @@ public class LongNote : MonoBehaviour
     {
         _isHeld = false;
 
-        int i = (int)Mathf.Round(_score)+1 * 100;
+        int i = ((int)Mathf.Round(_score)+1) * 100;
         hitEvent.Raise(this, i);
 
         Destroy(this.gameObject);

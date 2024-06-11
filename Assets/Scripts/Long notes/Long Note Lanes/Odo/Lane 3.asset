@@ -12,10 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04776a1c2e81e824ebdce9376d4dc759, type: 3}
   m_Name: Lane 3
   m_EditorClassIdentifier: 
-  notes:
-  - startTime: 15
-    length: 5
-  - startTime: 30
-    length: 5
+  notes: []
   songStartTime: 0
-  moveSpeed: 7.5
+  moveSpeed: 5

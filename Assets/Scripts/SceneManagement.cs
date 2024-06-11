@@ -14,6 +14,8 @@ public class SceneManagement : MonoBehaviour
 
     public GameEvent changingScene;
 
+    public bool isHandMode = false;
+
     private void Awake()
     {
         if(instance == null)
@@ -80,5 +82,10 @@ public class SceneManagement : MonoBehaviour
     public void ReloadScene()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    public void ChangeMode(bool handMode)
+    {
+        isHandMode = handMode;
     }
 }

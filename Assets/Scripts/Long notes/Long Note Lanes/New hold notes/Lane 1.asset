@@ -10,8 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 04776a1c2e81e824ebdce9376d4dc759, type: 3}
-  m_Name: Lane 4
+  m_Name: Lane 1
   m_EditorClassIdentifier: 
-  notes: []
-  songStartTime: 0
+  notes:
+  - startTime: 1
+    length: 5
+  - startTime: 5
+    length: 5
+  songStartTime: 2
   moveSpeed: 5

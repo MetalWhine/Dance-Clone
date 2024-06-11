@@ -22,6 +22,7 @@ public class SongManager1 : MonoBehaviour
         {
             var noteObj = Instantiate(notePrefab, transform.position, transform.rotation);
             noteObj.GetComponent<LongNote>().SetNoteData(noteData, noteDataSO.songStartTime, noteDataSO.moveSpeed);
+            noteObj.transform.parent = this.transform;
         }
     }
 }

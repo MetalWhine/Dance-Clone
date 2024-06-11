@@ -28,5 +28,7 @@ public class SongChecker : MonoBehaviour
         }
     }
 
-    void finishSong() { songOver.Raise(this, "Menu Scene"); }
+    void finishSong() { songOver.Raise(this, "Menu Scene");
+        Debug.Log("End song event sent");
+    }
 }
